@@ -1,0 +1,1020 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="home.css"> -->
+    <link rel="stylesheet" href="home1.css">
+    <!-- <link rel="stylesheet" href="hientai.css"> -->
+    <link rel="stylesheet" href="home3.css">
+    <title>Covid-19</title>
+    <link rel="icon" href="https://cdn0.iconfinder.com/data/icons/covid-19-37/512/Pandemic-covid19-coronavirus-covid-19-virustransmission-disease-incidence-contagious-256.png" type="image/png" >
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+</head>
+<body id="body">
+    <div class="se-pre-con"></div>
+    <div id="container">
+        <div id="map">
+            <!-- <div id="khuvuc"><div>covid 19 : </div><div id="diachi"> viet nam</div> </div> -->
+            <div id="chu_covid" class="bg-text"><img src="..\covid-19\logo_covid-removebg-preview.png" alt=""></div>
+            <button id="bg-text2" onclick="look()">look in the map</button>
+            <!-- <iframe id="map1" class="bg-image" src="https://corona.kompa.ai/" ></iframe> -->
+            <iframe id="map1" class="bg-image" src="https://hgis.uw.edu/virus/" ></iframe>
+        </div>
+        <nav id="nava">
+            
+            <!-- <div class="noidung" id="home_button" >home</div> -->
+            <div class="noidung" id="hientai_button" onclick="hientai()"><img src="https://www.flaticon.com/premium-icon/icons/svg/2949/2949046.svg" alt="">Thế giới</div>
+            <div class="noidung" id="covid19_button" onclick="covid19()">
+                <img src="https://www.flaticon.com/svg/static/icons/svg/3022/3022142.svg" alt="">
+                Covid 19
+                <div class="dropdown-content">
+                    <div id="button_thongtin" onclick="thongtin()">thông tin</div>
+                    <div id="button_trieuchung" onclick="trieuchung()">triệu chứng</div>
+                    <div id="button_phongngua" onclick="phongngua()">phòng ngừa</div>
+                </div>
+            </div>
+            <div class="noidung" id="tintuc_button" onclick="tintuc()"><img src="https://www.flaticon.com/svg/static/icons/svg/3208/3208892.svg" alt="">Tin Tức</div>
+            <div class="noidung" id="quiz_button" onclick="quiz()"><img src="https://www.flaticon.com/premium-icon/icons/svg/3406/3406886.svg" alt="">Quiz </div> 
+            <div id="slider" class="slider"></div>
+            <!-- 🌟  -->
+            <!-- <div id="search"><input type="text"  id="search_bar"><button id="button_search">search</button></div> -->
+        </nav>
+        <div id="hientai">
+            <div id="hientai_title">
+                <div id="hientai_title_1">Covid 19 trên thế giới</div>
+                <div id="hientai_title_2">Tính đến 20h41, 27/12/2020 (Tổng cộng có 80,453,462 ca nhiễm)</div>
+            </div>
+            <div id="hientai_">
+                <div class="hientai_01" >
+                    <div class="hientai_1">Nhiễm</div>
+                    <div id="nhiem_today" class="hientai_2" style="background-color: yellow;color: black;">0</div>
+                    <div id="nhiem_today1" class="hientai_3" style="color: black;">+158,378</div>
+                </div>
+                <div class="hientai_02">
+                    <div class="hientai_1">Tử vong</div>
+                    <div id="chet_today" class="hientai_2" style="background-color: red;">0</div>
+                    <div id="chet_today1" class="hientai_3" style="color: red;">+4,234</div>
+                </div>
+                <div class="hientai_03">
+                    <div class="hientai_1">Chữa khỏi</div>
+                    <div id="hoiphuc_today" class="hientai_2" style="background-color: green;">0</div>
+                    <div id="hoiphuc_today1" class="hientai_3" style="color: green;">+176,769</div>
+                </div>
+            </div>
+            
+            <div id="intro_bluezone">
+                <div id="bluezone_title">
+                    <div id="bluezone_title1">Chung tay cài đặt bluezone để phòng chống </div>
+                    <div id="bluezone_title2">dịch bệnh covid 19</div>
+                    <div id="bluezone_title3">Các bước cài đặt bluezone :</div>
+                    <div id="bluezone_title4">bước 1 : Vào CH play hoặc App store , tìm kiếm ứng dụng blue zone</div>
+                    <div id="bluezone_title5">bước 2 : Tải Bluezone ,bật định vi bluetooth ,bật thông báo</div>
+                    <div id="bluezone_title6">bước 3 : Khi có thông báo bạn đã tiếp xúc với người mắc covid 19 thì bạn nên ngay lập tức đến cơ sở y tế để được sét nghiệm và báo cáo về địa điểm tiếp xúc</div>
+                </div>
+                <div id="blue_zone" onmouseover="continuerun = 1" onmouseout="continuerun = 0">
+                    <!-- <div class="mySlides" id="blue_zone_title">hãy cùng tải blue zone để cùng chống covid 19 với 3 bước cơ bản  </div> -->
+                    <img class="mySlides" src="..\covid-19\bluezone1.png" alt="">
+                    <img style="display: none;" class="mySlides" src="..\covid-19\bluezone6.png" alt="">
+                    <img style="display: none;" width="180%" height="150%" class="mySlides" src="../covid-19/bluezone.png" alt="">
+                    <img style="display: none;" class="mySlides" src="https://www.binhduong.gov.vn/CMSImageNew/2020-08/photo-1-15972259216341541721242_Key_27082020140139.jpg" alt="">
+                    <img class="mySlides" style="display: none" src="https://baokhanhhoa.vn/dataimages/202005/original/images5404405_Bluezone_30__1_.jpg" alt="">
+                </div>
+            </div>
+
+            <div id="hientai_camac">
+                <div id="hientai_camac_title">Tính đến 20h41, 2/12/2020, nguồn: WorldOMeters</div>
+                <div id="hientai_camac_table">
+                    <div >
+                        <div>CHÂU ÂU</div>
+                        <div id="EUROPE">17,537,068  </div>
+                    </div>
+                    <div>
+                        <div>CHÂU Á</div>
+                        <div id="ASIA">16,928,289</div>
+                    </div>
+                    <div>
+                        <div>BẮC MỸ</div>
+                        <div id="NORTH_AMERICA">16,416,536</div>
+                    </div>
+                    <div>
+                        <div>NAM MỸ</div>
+                        <div id="SOUTH_AMERICA">11,216,585</div>   
+                    </div>
+                    <div>
+                        <div>CHÂU PHI</div>
+                        <div id="AFRICA">2,200,369</div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="hientai_container">
+                <div id="bangthongke">
+                    <div id="bangthongke_title">
+                        <div id="bangthongke_title1">bảng thống kê covid 19 toàn thế giới</div>
+                        <div id="bangthongke_title1_moblie">bảng thống kê </div>
+                        <div id="bangthongke_title2">
+                            <button id="dangmac" onclick="dangmac()">đang mắc</button>
+                            <button id="chuakhoi" onclick="chuakhoi()">chữa khỏi</button>
+                            <button id="tuvong" onclick="tuvong()">tử vong</button>
+                        </div>
+                    </div>
+                    <table id="table_dangmac" >
+                        <tr id="table_hang">
+                            <th id="table_01">
+                                <img class="mySlides03" src="..\covid-19\xecuuthuong.png" alt=""> 
+                                <img class="mySlides03" style="display: none;" src="https://cdn1.iconfinder.com/data/icons/virus-covid-19-coronavirus-antivirus-around-worl-1/130/corona-virus-18-256.png" alt="">                               
+                            </th>
+                            <th id="table_02">Quốc gia</th>
+                            <th id="table_03">thuộc vùng lãnh thổ</th>
+                            <th id="table_04">dân số</th>
+                            <th id="table_05">tổng số ca mắc</th>
+                            <th id="table_06">số ca mắc/1 người</th>
+                            <th id="table_07">số ca mắc/1 triệu người</th>
+                            <th id="table_08">số trường hợp hôm nay</th>
+                        </tr>
+                    </table>
+                    <table id="table_chuakhoi">
+                        <tr id="table_hang">
+                            <th id="table_01">
+                                <img  src="https://cdn2.iconfinder.com/data/icons/covid-19-1/64/30-Doctor-256.png" alt="">
+                            </th>
+                            <th id="table_02">Quốc gia</th>
+                            <th id="table_03">thuộc vùng lãnh thổ</th>
+                            <th id="table_04">dân số</th>
+                            <th id="table_05">tổng số ca đã chữa khỏi</th>
+                            <th id="table_06">số ca hồi phục/1 triệu người</th>
+                            <th id="table_07">số ca hồi phục hôm nay</th>
+                        </tr>
+                        
+                    </table>
+                    <table id="table_tuvong">
+                        <tr id="table_hang">
+                            <th id="table_01"><img src="https://cdn4.iconfinder.com/data/icons/virus-transmission-30/64/recover-case-coronavirus-covid-patient-avatar-healthy-256.png" alt=""></th>
+                            <th id="table_02">Quốc gia</th>
+                            <th id="table_03">thuộc vùng lãnh thổ</th>
+                            <th id="table_04">dân số</th>
+                            <th id="table_05">tổng số ca tử vong</th>
+                            <th id="table_06">số ca tử vong/1 người</th>
+                            <th id="table_07">số ca tử vong/1 triệu ng</th>
+                            <th id="table_08">số ca tử vong hôm nay</th>
+                        </tr>
+                        
+                    </table>
+                </div>
+                <div id="hientai_benphai">
+                    <div id="sticky">
+                        <div id="hientai_thongbao">
+                            <div id="hientai_thongbao1">QUỐC GIA & VÙNG LÃNH THỔ CÓ CA NHIỄM</div>
+                            <div id="hientai_thongbao2">226</div>
+                            <div id="hientai_thongbao3">THỜI GIAN Ủ BỆNH (NGÀY)</div>
+                            <div id="hientai_thongbao4">2-14</div>
+                            <div id="hientai_thongbao5">(Có thể tới 27 ngày)</div>
+                            <div id="hientai_thongbao6">NHIỄM / 1 TRIỆU NGƯỜI</div>
+                            <div id="hientai_thongbao7">8256</div>
+                            <div id="hientai_thongbao8">(Tính theo tổng dân số thế giới)</div>
+                            <div id="hientai_thongbao9">TỬ VONG / 1 TRIỆU NGƯỜI</div>
+                            <div id="hientai_thongbao10">191.2</div>
+                            <div id="hientai_thongbao11">(Tính theo tổng dân số thế giới)</div>
+                        </div>
+                        <img style="display:block" class="mySlides02" src="https://thumbs.dreamstime.com/z/world-corona-virus-attack-concept-doctor-fight-stop-covid-178299682.jpg" alt="">
+                        <img style="display:none" class="mySlides02" src="https://baoquocte.vn/stores/news_dataimages/nguyennga/042020/03/15/3103_2_LUTL.jpg" alt="">
+                        <img style="display:none" class="mySlides02" src="https://truyenhinhnghean.vn/file/4028eaa46735a26101673a4df345003c/4028eaa467f477c80167f4aa053f0c68/042020/4YUAP_20200407172433.jpg" alt="">
+                        <img style="display:none" class="mySlides02" src="https://baoquocte.vn/stores/news_dataimages/nguyennga/042020/03/15/3223_3_XUPY.jpg" alt="">
+                        <img style="display:none" class="mySlides02" src="https://truyenhinhnghean.vn/file/4028eaa46735a26101673a4df345003c/4028eaa467f477c80167f4aa053f0c68/042020/11CEOF_20200407172629.jpg" alt="">
+                        <img style="display:none" class="mySlides02" src="https://media.laodong.vn/Storage/NewsPortal/2020/4/6/796339/Covid-191.jpg" alt="">
+                        <img style="display:none" class="mySlides02" src="https://i.chungta.vn/2020/03/27/1-1585260335_860x0.jpg" alt="">
+                        <img style="display:none" class="mySlides02" src="https://cuoifly.tuoitre.vn/820/0/ttc/r/2020/04/18/biem-hoa-bac-si-chien-dau-virus-corona-covid-1587193322.jpg" alt="">
+                        
+                        <img style="display:none" class="mySlides02" src="https://znews-photo.zadn.vn/w660/Uploaded/wyhktpu/2020_04_19/1mobile.jpg" alt="">
+                        <img style="display:none" class="mySlides02" src="https://image.sggp.org.vn/w580/Uploaded/2020/yfsgf/2020_04_09/ra-mat-chien-dich-dieu-nho-be-vi-dai_asmv.jpg" alt="">
+                        <img style="display:none" class="mySlides02" src="https://truyenhinhnghean.vn/file/4028eaa46735a26101673a4df345003c/4028eaa467f477c80167f4aa053f0c68/042020/11CEOF_20200407172629.jpg" alt="">
+                        <img style="display:none" class="mySlides02" src="https://image3.tienphong.vn/w665/Uploaded/2020/tccbzqvp/2020_04_10/tien_phong_covid_19_5_scsk.jpg" alt="">
+                        
+                        
+                        <!-- <img src="https://moet.gov.vn/content/tintuc/PublishingImages/AnhTinBai/2020%20ANHTINBAI/trach-nhiem.jpg?RenditionID=1" alt=""> -->
+                    </div>
+                </div>    
+            </div>
+            
+
+        </div>
+        <div id="covid19">
+            <div id="thongtin">
+                <div id="thongtin_noidung">
+                    <div id="covid_bentrai">
+                        <div id="thongtin_title">Thông tin về covid 19</div>
+                        <div id="thongtin_bentrai1">
+                            <div id="thongtin_capnhat">Cập nhật ngày 27 tháng 10 năm 2020</div>
+                            <a id="a_share" onclick="share()"  href="#"><img src="https://cdn0.iconfinder.com/data/icons/social-circle-3/72/Facebook-512.png" alt=""></a>
+                            <a id="a_share1" onclick="share()"  href="#"><img src="https://cdn3.iconfinder.com/data/icons/2018-social-media-logotypes/1000/2018_social_media_popular_app_logo_twitter-512.png" alt=""></a>
+                            <div id="share"><img src="https://cdn3.iconfinder.com/data/icons/web-31/24/share-512.png" alt=""><div id="slgshare"></div></div>
+                        </div>
+                        <div>
+                            <div class="covid_bentrai_title" id="margin_2">1.Covid 19 :</div>
+                            <div id="text_indent" class="margin_5">Bệnh virus corona 2019 hay COVID-19 (tiếng Anh: Coronavirus disease 2019) là một bệnh đường hô hấp cấp tính truyền nhiễm gây ra bởi chủng virus corona SARS-CoV-2</div>
+                        </div>
+                        <div>
+                            <div class="covid_bentrai_title" id="margin_2">2.Cách Covid 19 lây nhiễm :</div>
+                            <div id="text_indent" class="margin_5">COVID-19 được cho là lây lan chủ yếu thông qua tiếp xúc gần từ người sang người, bao gồm cả giữa những người ở gần nhau (trong phạm vi 6 feet). Những người bị nhiễm bệnh nhưng không biểu hiện các triệu chứng có thể lây vi-rút sang người khác. Các ca tái nhiễm COVID-19 đã được báo cáo nhưng hiếm gặp. Chúng tôi vẫn đang tìm hiểu về cách thức lây lan của vi-rút và mức độ nghiêm trọng của bệnh.</div>
+                            <div class="covid_title_child">
+                                <div class="margin_2"><b>COVID-19 lây truyền dễ dàng từ người sang người</b></div>
+                                <div id="text_indent" class="margin_5">Mức độ vi-rút lây lan từ người sang người dễ dàng như thế nào có thể khác nhau. Vi-rút gây ra COVID-19 lây lan nhanh hơn cúm, nhưng lây lan chậm hơn bệnh sởi, một bệnh có vi-rút là loại vi-rút thuộc những loại mang tính truyền nhiễm cao nhất được biết có ảnh hưởng đến con người.</div>
+                            </div>
+                            <div class="covid_title_child">
+                                <div class="margin_2"><b>COVID-19 lây lan phổ biến nhất khi tiếp xúc gần</b></div>
+                                <ul>
+                                    <li>Những người ở gần (trong phạm vi 6 feet) với người mắc COVID-19 hoặc tiếp xúc trực tiếp với người đó sẽ có nguy cơ lây nhiễm cao nhất.</li>
+                                    <li>Khi những người nhiễm COVID-19 ho, hắt hơi, ca hát, trò chuyện hoặc hít thở, họ sẽ tạo ra các giọt bắn từ đường hô hấp. Những giọt bắn này có thể có kích thước từ những giọt lớn (một số giọt có thể nhìn thấy được) đến những giọt nhỏ hơn. Các giọt nhỏ cũng có thể tạo thành các hạt khi chúng khô nhanh trong luồng không khí.</li>
+                                    <li>Lây nhiễm xảy ra chủ yếu do tiếp xúc với các giọt bắn từ đường hô hấp khi một người tiếp xúc gần với người mắc COVID-19.</li>
+                                    <li>Các giọt bắn từ đường hô hấp gây nhiễm bệnh khi người khác hít vào hoặc các giọt đó đọng lại trên các màng nhầy, chẳng hạn như các màng nhầy bên trong mũi và miệng.</li>
+                                    <li>Khi các giọt bắn từ đường hô hấp từ người nhiễm COVID-19 di chuyển ra xa hơn, mật độ các giọt bắn này sẽ giảm xuống. Các giọt bắn lớn hơn sẽ rơi xuống trong không khí do trọng lực. Các giọt bắn và hạt nhỏ hơn phát tán trong không khí.</li>
+                                    <li>Theo thời gian, số lượng vi-rút lây nhiễm trong các giọt bắn từ đường hô hấp cũng giảm dần.</li>
+                                </ul>
+                            </div>
+                            <div class="covid_title_child">
+                                <div class="margin_2"><b>COVID-19 đôi khi có thể lây lan qua không khí</b></div>
+                                <ul>
+                                    <li>Một số lây nhiễm có thể lây lan khi phơi nhiễm với vi-rút ở dạng giọt bắn nhỏ và các hạt nhỏ có thể tồn tại trong không khí từ vài phút đến hàng giờ. Những vi-rút này có thể lây nhiễm sang người ở cách xa người bị nhiễm với khoảng cách hơn 6 feet hoặc sau khi người này rời khỏi chỗ đó.</li>
+                                    <li>Loại lây lan này được gọi là lây truyền qua không khí và là một con đường quan trọng làm lây lan các bệnh truyền nhiễm khác như bệnh lao, bệnh sởi và thủy đậu.</li>
+                                    <li>Có bằng chứng cho thấy trong một số điều kiện nhất định, những người mắc COVID-19 dường như có thể lây nhiễm bệnh sang người khác với khoảng cách xa hơn 6 feet. Sự lây truyền này xảy ra trong không gian kín, không có đủ hệ thống thông gió. Đôi khi người bị nhiễm bệnh đang thở mạnh, chẳng hạn như khi đang ca hát hoặc tập thể dục.</li>
+                                    <ul>
+                                        <li>Trong những tình huống đó, các nhà khoa học tin rằng lượng giọt bắn và các hạt nhỏ hơn có thể gây lây nhiễm bệnh do người mắc COVID-19 phát ra tập trung ở mật độ đủ để lây lan vi-rút sang người khác. Người bị nhiễm bệnh ở trong cùng một không gian trong cùng khoảng thời gian hoặc ngay sau khi người mắc COVID-19 rời đi.</li>
+                                    </ul>
+                                    <li>Dữ liệu hiện có cho thấy vi-rút gây ra COVID-19 lây lan do tiếp xúc gần với người mắc COVID-19 phổ biến hơn nhiều so với lây truyền trong không khí</li>
+                                </ul>
+                            </div>
+                            <div class="covid_title_child">
+                                <div class="margin_2"><b>COVID-19 lây lan ít phổ biến hơn khi tiếp xúc với các bề mặt bị nhiễm bẩn</b></div>
+                                <ul>
+                                    <li>Các giọt bắn từ đường hô hấp cũng có thể rơi trên các bề mặt và đồ vật. Một người có thể bị nhiễm COVID-19 khi chạm vào bề mặt hoặc đồ vật có dính vi-rút trên đó và sau đó chạm vào miệng, mũi hoặc mắt của họ.</li>
+                                    <li>Lây nhiễm do chạm vào các bề mặt không được cho là cách lây truyền phổ biến của COVID-19 </li>
+                                </ul>
+                            </div>
+                            <div class="covid_title_child">
+                                <div class="margin_2"><b>COVID-19 hiếm khi lây lan giữa người và động vật</b></div>
+                                <ul>
+                                    <li>Có vẻ chủng vi-rút gây bệnh COVID-19 có thể lây lan từ người sang động vật trong một số trường hợp. CDC biết rằng có một số lượng nhỏ thú cưng trên toàn thế giới, bao gồm cả mèo và chó, được báo cáo bị nhiễm vi-rút gây ra COVID-19, phần lớn sau khi tiếp xúc gần với người mắc bệnh COVID-19. Tìm hiểu những điều quý vị nên thực hiện nếu quý vị có thú cưng.</li>
+                                    <li>Tại thời điểm này, nguy cơ COVID-19 lây lan từ động vật sang người được coi là thấp. Tìm hiểu về COVID-19 và thú cưng và các động vật khác.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="covid_bentrai_title" id="margin_2">3.Tái nhiễm Covid 19 :</div>
+                            <div id="text_indent" class="margin_5">Các ca tái nhiễm COVID-19 đã được báo cáo nhưng hiếm gặp​.​</div>
+                            <div id="text_indent" class="margin_5">Nhìn chung, tái nhiễm có nghĩa là một người đã từng bị nhiễm (bị bệnh), khỏi bệnh và sau đó bị nhiễm lại. Dựa trên kiến thức về các loại virus tương tự, chúng ta có thể dự đoán được một số trường hợp tái nhiễm. Chúng tôi vẫn đang tìm hiểu thêm về COVID-19. Những nghiên cứu về đại dịch COVID-19 đang tiếp diễn sẽ giúp chúng tôi hiểu về:</div>
+                            <ul>
+                                <li>Khả năng tái nhiễm có xảy ra không</li>
+                                <li>Tần suất tái nhiễm sẽ xảy ra</li>
+                                <li>Tái nhiễm có thể xảy ra sau lần lây nhiễm đầu tiên khoảng bao lâu</li>
+                                <li>Mức độ nghiêm trọng của các trường hợp tái nhiễm</li>
+                                <li>Người có nguy cơ tái nhiễm cao hơn</li>
+                                <li>Sự tái nhiễm có ý nghĩa gì đối với hệ miễn dịch ở một người</li>
+                                <li>Nếu một người có khả năng lây lan COVID-19 ra cộng đồng khi bị tái nhiễm</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <div class="covid_bentrai_title" id="margin_2">4.Điều chế vắc xin Covid 19 :</div>
+                            <div>
+                                <div class="margin_2"><u>Giới thiệu về vắc xin covid 19 :</u></div>
+                                <div id="text_indent" class="margin_5">Là chế phẩm có tính kháng nguyên dùng để tạo miễn dịch đặc hiệu chủ động, nhằm tăng sức đề kháng của cơ thể đối với một (số) tác nhân gây bệnh cụ thể. Các nghiên cứu mới còn mở ra hướng dùng vaccine để điều trị một số bệnh (vaccine liệu pháp, một hướng trong các miễn dịch liệu pháp). Thuật ngữ vaccine xuất phát từ vaccinia, loại virus gây bệnh đậu bò nhưng khi đem chủng cho người lại giúp ngừa được bệnh đậu mùa (tiếng Latinh vacca nghĩa là "con bò cái"). Việc dùng vaccine để phòng bệnh gọi chung là chủng ngừa hay tiêm phòng hoặc tiêm chủng, mặc dù vaccine không những được cấy (chủng), tiêm mà còn có thể được đưa vào cơ thể qua đường miệng.</div>
+                            </div>
+                            <div>
+                                <div style="text-decoration: underline;" class="margin_2">Cơ chế của vắc xin covid 19 :</div>
+                                <div class="margin_5">theo Trung tâm tiêm chủng VNVC</div>
+                                <ul>
+                                    <li>Vắc xin là chế phẩm có chứa kháng nguyên (có thể là các vi rút hoặc vi khuẩn sống, giảm độc lực, hay bị bất hoạt, giết chết) dùng để kích thích cơ thể tạo miễn dịch nhằm chống lại tác nhân gây bệnh. Vắc xin kích thích cơ thể tạo nên miễn dịch "bắt chước" giống nhiễm trùng tự nhiên.</li>
+                                    <li>Khi đưa vào cơ thể vắc xin sẽ nhận diện nó như là "vật lạ", kích thích hệ thống miễn dịch sản sinh ra kháng thể trung hòa tác nhân gây bệnh, giống như nhiễm trùng tự nhiên. Quá trình tạo kháng thể thường mất khoảng vài tuần, có thể gây nên một số triệu chứng nhẹ như sốt. Nhưng đây là biểu hiện bình thường và được coi như là dấu hiệu đáp ứng miễn dịch của cơ thể.</li>
+                                    <li>Sau khi quá trình nhiễm trùng "bắt chước" này kết thúc, cơ thể sẽ tạo ra các tế bào lympho có trí nhớ miễn dịch, sẵn sàng đáp ứng nhanh khi gặp lại các tác nhân gây bệnh trong những lần sau giúp cơ thể chủ động chống lại tác nhân gây bệnh khi bị phơi nhiễm.</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <div style="text-decoration: underline;" class="margin_2">Các loại vắc xin hiện tại trên thế giới : </div>
+                                <ul>
+                                    <li>vắc xin  Sputnik V từ Nga : Ngày 11-8, Tổng thống Vladimir Putin tuyên bố vắcxin ngừa COVID-19 đầu tiên của Nga đã được đăng ký và sẽ sản xuất hàng loạt trong thời gian ngắn tới</li>
+                                    <li>Pfizer : bắt đầu thử nghiệm bốn biến thể vắc-xin coronavirus khác nhau để giúp chấm dứt đại dịch COVID-19 và lên kế hoạch mở rộng thử nghiệm trên người cho hàng nghìn bệnh nhân thử nghiệm vào tháng 9 năm 2020. Các dược công ty đã tiêm các liều vắc-xin tiềm năng BNT162, được phát triển bởi nhà sản xuất thuốc BioNTech (NASDAQ: BNTX) từ Mainz, Đức, vào con người đầu tiên những người tham gia ở Mỹ vào đầu tháng Năm. Dựa trên kết quả, Pfizer cho biết họ "sẽ có thể cung cấp hàng triệu liều trong khung thời gian tháng 10" và dự kiến ​​sản xuất hàng trăm triệu liều vào năm 2021.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="covid_bentrai_title" id="margin_2">5.Covid 19 được tìm thấy lần đầu tiên : </div>
+                            <div id="text_indent" class="margin_5">Khởi nguồn vào cuối tháng 12 năm 2019[b] với tâm dịch đầu tiên được ghi nhận tại thành phố Vũ Hán thuộc miền Trung Trung Quốc, bắt nguồn từ một nhóm người mắc viêm phổi không rõ nguyên nhân. Giới chức y tế địa phương xác nhận rằng trước đó họ đã từng tiếp xúc, chủ yếu với những thương nhân buôn bán và làm việc tại chợ bán buôn hải sản Hoa Nam. Các nhà khoa học Trung Quốc đã tiến hành nghiên cứu và phân lập được một chủng coronavirus mới, được Tổ chức Y tế Thế giới lúc đó tạm thời gọi là 2019-nCoV,[c] có trình tự gen giống với SARS-CoV trước đây với mức tương đồng lên tới 79,5%.</div> 
+                            <div id="text_indent" class="margin_5">Các ca nghi nhiễm đầu tiên ở Vũ Hán được báo cáo vào ngày 31 tháng 12 năm 2019. Trường hợp tử vong do SARS-CoV-2 đầu tiên xảy ra ở Vũ Hán vào ngày 9 tháng 1 năm 2020. Các ca nhiễm virus đầu tiên được xác nhận bên ngoài Trung Quốc bao gồm hai người phụ nữ ở Thái Lan và một người đàn ông ở Nhật Bản.Sự lây nhiễm virus từ người sang người đã được xác nhận cùng với tỷ lệ bùng phát dịch tăng nhanh vào giữa tháng 1 năm 2020. Ngày 23 tháng 1 năm 2020, chính phủ Trung Quốc quyết định phong tỏa Vũ Hán, toàn bộ hệ thống giao thông công cộng và hoạt động xuất - nhập khẩu đều bị tạm ngưng.</div>
+                            <div id="text_indent" class="margin_5">Ngày 11 tháng 3 năm 2020, Tổ chức Y tế Thế giới (WHO) ra tuyên bố gọi "COVID-19" là "Đại dịch toàn cầu"</div>
+                        </div>
+                        <div>
+                            <div class="covid_bentrai_title" id="margin_2">6.Covid 19 được đặt tên như thế nào :</div>
+                            <div id="text_indent" class="margin_5">Ngày 11 tháng 2 năm 2020, Tổ chức Y tế Thế giới đã đặt tên chính thức cho bệnh này là COVID-19, còn loại virus gây ra bệnh được gọi chính thức là SARS-CoV-2. Người đứng đầu Tổ chức Y tế Thế giới Tedros Adhanom cho biết "CO" là viết tắt của "corona", "VI" viết tắt của "virus", "D" là viết tắt của "disease" (dịch bệnh) và "19" là viết tắt của năm "2019", vì dịch bệnh lần đầu tiên được xác định vào cuối tháng 12 năm 2019</div>
+                            <div id="text_indent" class="margin_5">Quá trình đặt tên bệnh đã được gọi là "hỗn loạn"</div>
+                        </div>
+                        <div>
+                            <div class="covid_bentrai_title" id="margin_2">7.Đâu là sự khác nhau giữa Bệnh Cúm (Cúm) và COVID-19?</div>
+                            <div id="text_indent" class="margin_5">Bệnh Cúm (Cúm) và COVID-19 đều là các bệnh hô hấp truyền nhiễm nhưng do các loại vi-rút khác nhau gây ra. COVID-19 là do nhiễm vi-rút Corona chủng mới (gọi là SARS-CoV-2) còn cúm là do nhiễm các vi-rút cúm.</div>
+                            <div id="text_indent" class="margin_5">Có một số điểm khác biệt chính giữa bệnh cúm và COVID-19. COVID-19 dường như dễ lây lan hơn bệnh cúm và gây ra nhiều bệnh nghiêm trọng hơn ở một số người. Mọi người cũng có thể mắc bệnh trong thời gian dài hơn trước khi xuất hiện các triệu chứng và có thể gây lây nhiễm lâu hơn. Một điểm khác biệt quan trọng khác là bệnh cúm đã có vắc-xin phòng bệnh. Hiện tại không có vắc-xin phòng ngừa COVID-19. Cách tốt nhất để ngăn ngừa nhiễm bệnh là tránh tiếp xúc với vi-rút. Các thông tin khác về sự khác nhau giữa bệnh cúm và COVID-19 được trình bày trong các phần khác nhau bên dưới.</div>
+                            <div id="text_indent" class="margin_5">Bởi vì cúm và COVID-19 có một số các triệu chứng tương tự nhau nên có thể khó để phân biệt hai loại bệnh này chỉ dựa trên triệu chứng, do đó có thể cần thực hiện xét nghiệm để giúp xác nhận chẩn đoán bệnh. Cúm và COVID-19 có thể có nhiều đặc điểm chung nhưng giữa hai loại bệnh này vẫn có một số sự khác biệt quan trọng.</div>
+                            <div id="text_indent" class="margin_5">Mặc dù thông tin được cập nhật mỗi ngày nhưng có nhiều điều về chúng ta vẫn chưa biết về COVID-19 và vi-rút gây ra căn bệnh này. Trang này so sánh COVID-19 và bệnh cúm, dựa trên thông tin có sẵn tốt nhất cho đến thời điểm hiện tại.</div>
+                        </div>
+                    </div>
+                    <div id="covid_benphai">
+                        <div class="covid_benphai_title">Tin tức về Covid 19</div>
+                        <a href="https://www.vinmec.com/vi/tin-tuc/thong-tin-suc-khoe/dich-2019-ncov/tu-van-bac-si/virus-corona-la-gi/">
+                            <img id="covid_benphai_img" src="https://vinmec-prod.s3.amazonaws.com/images/20200202_093219_250594_viber_image_2020-02-0.max-800x800.jpg" alt="">
+                            <div class="tintuc_title">
+                                <div style="color: rgb(34, 34, 197);text-decoration: underline;">Virus corona là gì?</div>
+                                <div>Tiến sĩ Nguyễn Xuân Hưng - Viện trưởng Viện Nghiên cứu Ứng dụng và Y học tái tạo Vinmec (VIASRM) dịch và tổng hợp từ các nguồn: CDC, WHO, ECDC.</div>
+                            </div>
+                        </a>
+                        <a href="https://vi.wikipedia.org/wiki/B%E1%BB%87nh_virus_corona_2019">
+                            <img id="covid_benphai_img" src="https://i2.wp.com/zchannel.org/wp-content/uploads/2020/09/wikipedia.jpg?ssl=1" alt="">
+                            <div class="tintuc_title">
+                                <div class="title" style="color: rgb(34, 34, 197);text-decoration: underline;">Bệnh virus corona 2019</div>
+                                <div>Bài này viết về một căn bệnh gây ra bởi virus SARS-CoV-2 (trước đây là 2019-nCoV)</div>
+                            </div>
+                        </a>
+                        <a href="https://www.hoihendumdlstphcm.org.vn/index.php/kien-thuc-y-khoa/371-virus-corona-moi-2019-ncov-covid-19-sars-cov-2-la-gi">
+                            <img id="covid_benphai_img" src="https://i.ytimg.com/vi/6TfFKauZl40/maxresdefault.jpg" alt="">
+                            <div class="tintuc_title">
+                                <div class="title" style="color: rgb(34, 34, 197);text-decoration: underline;">Virus Corona mới 2019-nCov (Covid-19, SARS CoV-2) là gì?</div>
+                                <div>THÔNG TIN DÀNH CHO BỆNH NHÂN</div>
+                            </div>
+                        </a>
+                        <a href="https://vnreview.vn/tin-tuc-khoa-hoc-cong-nghe/-/view_content/content/3086500/dai-dich-covid-19-la-gi">
+                            <img id="covid_benphai_img" src="https://aeonmall-long-bien.com.vn/wp-content/uploads/2020/03/bien-phap-phong-tranh-coronavirus-750x468.jpg" alt="">
+                            <div class="tintuc_title">
+                                <div class="title" style="color: rgb(34, 34, 197);text-decoration: underline;">ĐẠI DỊCH COVID-19 LÀ GÌ?</div>
+                                <div>Với sự lây lan nhanh chóng của virus Corona chủng mới, Tổ chức y tế thế giới (WHO) mới đây đã công bố Covid-19 là một đại dịch.</div>
+                            </div>
+                        </a>
+                        <a href="https://www.unicef.org/vietnam/vi/covid-19" style="border-bottom: none;border-right: 1px solid black;">
+                            <img id="covid_benphai_img" src="https://pbs.twimg.com/profile_images/1093349030711578624/P4hn10BV.jpg" alt="">    
+                            <div class="tintuc_title">
+                                <div style="color: rgb(34, 34, 197);text-decoration: underline;">Dịch bệnh viêm đường hô hấp cấp do COVID-19</div>
+                                <div>Những điều bạn cần biết về COVID-19 để bảo vệ bản thân và gia đình</div>
+                            </div>
+                        </a>
+                        <div class="covid_benphai_title">Video về covid 19 </div>
+                         <!-- <div class="covid_benphai_title">Xem thêm thông tin về covid 19 :</div> -->
+                        <iframe style="margin: 5px 0px 5px 1%;" src="https://www.youtube.com/embed/v7n_uQ8S5-0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe style="margin: 5px 0px 5px 1%;" src="https://www.youtube.com/embed/DQex9-3Mac0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe style="margin: 5px 0px 5px 1%;" src="https://www.youtube.com/embed/7YMEjhaBqfs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe style="margin: 5px 0px 5px 1%;" src="https://www.youtube.com/embed/2boiUbiukPU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <img id="thongbao_benphai" src="https://moh.gov.vn/documents/176127/0/06.8.2020+KC+1.jpg/7d1e356b-1753-49b7-ab96-2fc2bd1dde04?t=1596714762631" alt="">
+                        <!-- <img id="thongbao_benphai" src="https://yenbai.gov.vn/covid19/noidung/hinhanhvideo/Lists/HinhAnh/Attachments/118/3.jpg" alt=""> -->
+                        <div id="nhay_text">cùng tham gia chống dịch với vũ điệu rửa tay vươn tầm thế giới</div>
+                        <iframe id="margin_center" src="https://www.youtube.com/embed/BtulL3oArQw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe id="margin_center" src="https://www.youtube.com/embed/JV9MeSiRxBI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe id="margin_center" src="https://www.youtube.com/embed/i5NEkeY8SOs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                <!-- </div> -->
+                <div id="thongtin_mobile">
+                    <div class="covid_benphai_title">Tin tức về Covid 19</div>
+                        <a href="https://www.vinmec.com/vi/tin-tuc/thong-tin-suc-khoe/dich-2019-ncov/tu-van-bac-si/virus-corona-la-gi/">
+                            <img id="covid_benphai_img" src="https://vinmec-prod.s3.amazonaws.com/images/20200202_093219_250594_viber_image_2020-02-0.max-800x800.jpg" alt="">
+                            <div class="tintuc_title">
+                                <div style="color: rgb(34, 34, 197);text-decoration: underline;">Virus corona là gì?</div>
+                                <div>Tiến sĩ Nguyễn Xuân Hưng - Viện trưởng Viện Nghiên cứu Ứng dụng và Y học tái tạo Vinmec (VIASRM) dịch và tổng hợp từ các nguồn: CDC, WHO, ECDC.</div>
+                            </div>
+                        </a>
+                        <a href="https://vi.wikipedia.org/wiki/B%E1%BB%87nh_virus_corona_2019">
+                            <img id="covid_benphai_img" src="https://i2.wp.com/zchannel.org/wp-content/uploads/2020/09/wikipedia.jpg?ssl=1" alt="">
+                            <div class="tintuc_title">
+                                <div class="title" style="color: rgb(34, 34, 197);text-decoration: underline;">Bệnh virus corona 2019</div>
+                                <div>Bài này viết về một căn bệnh gây ra bởi virus SARS-CoV-2 (trước đây là 2019-nCoV)</div>
+                            </div>
+                        </a>
+                        <a href="https://www.hoihendumdlstphcm.org.vn/index.php/kien-thuc-y-khoa/371-virus-corona-moi-2019-ncov-covid-19-sars-cov-2-la-gi">
+                            <img id="covid_benphai_img" src="https://i.ytimg.com/vi/6TfFKauZl40/maxresdefault.jpg" alt="">
+                            <div class="tintuc_title">
+                                <div class="title" style="color: rgb(34, 34, 197);text-decoration: underline;">Virus Corona mới 2019-nCov (Covid-19, SARS CoV-2) là gì?</div>
+                                <div>THÔNG TIN DÀNH CHO BỆNH NHÂN</div>
+                            </div>
+                        </a>
+                        <a href="https://vnreview.vn/tin-tuc-khoa-hoc-cong-nghe/-/view_content/content/3086500/dai-dich-covid-19-la-gi">
+                            <img id="covid_benphai_img" src="https://aeonmall-long-bien.com.vn/wp-content/uploads/2020/03/bien-phap-phong-tranh-coronavirus-750x468.jpg" alt="">
+                            <div class="tintuc_title">
+                                <div class="title" style="color: rgb(34, 34, 197);text-decoration: underline;">ĐẠI DỊCH COVID-19 LÀ GÌ?</div>
+                                <div>Với sự lây lan nhanh chóng của virus Corona chủng mới, Tổ chức y tế thế giới (WHO) mới đây đã công bố Covid-19 là một đại dịch.</div>
+                            </div>
+                        </a>
+                        <a href="https://www.unicef.org/vietnam/vi/covid-19" >
+                            <img id="covid_benphai_img" src="https://pbs.twimg.com/profile_images/1093349030711578624/P4hn10BV.jpg" alt="">    
+                            <div class="tintuc_title">
+                                <div style="color: rgb(34, 34, 197);text-decoration: underline;">Dịch bệnh viêm đường hô hấp cấp do COVID-19</div>
+                                <div>Những điều bạn cần biết về COVID-19 để bảo vệ bản thân và gia đình</div>
+                            </div>
+                        </a>
+                        <div class="covid_benphai_title">Video về covid 19 </div>
+                        <div class="slideshow-container">
+
+                            <div class="mySlides1 fade">
+                              <!-- <div class="numbertext">1 / 3</div> -->
+                          <iframe style="margin: 5px 0px -15px 5%;" src="https://www.youtube.com/embed/DQex9-3Mac0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                              <!-- <div class="text">Caption Text</div> -->
+                            </div>
+                            
+                            <div class="mySlides1 fade">
+                              <!-- <div class="numbertext">2 / 3</div> -->
+                            <iframe style="margin: 5px 0px -15px 5%;" src="https://www.youtube.com/embed/7YMEjhaBqfs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                              <!-- <div class="text">Caption Two</div> -->
+                            </div>
+                            
+                            <div class="mySlides1 fade">
+                              <!-- <div class="numbertext">3 / 3</div> -->
+                          <iframe style="margin: 5px 0px -15px 5%;" src="https://www.youtube.com/embed/2boiUbiukPU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                              <!-- <div class="text">Caption Three</div> -->
+                            </div>
+                            
+                            <!-- <a class="prev" onclick="plusSlides(-1)">&#10094;</a> -->
+                            <!-- <a class="next" onclick="plusSlides(1)">&#10095;</a> -->
+                            
+                            </div>
+                            <br>
+                            
+                            <div style="text-align:center;margin-top: -5px;" >
+                              <span class="dot" onclick="currentSlide(1)"></span> 
+                              <span class="dot" onclick="currentSlide(2)"></span> 
+                              <span class="dot" onclick="currentSlide(3)"></span> 
+                            </div>        
+                        </div>
+                       
+                </div>
+            </div>
+            <div id="trieuchung">
+                <div style="display: flex;">
+                    <div id="covid_bentrai">
+                        <div id="thongtin_title">Triệu chứng của bệnh Covid 19</div>
+                        <div id="thongtin_bentrai1">
+                            <div id="thongtin_capnhat">Cập nhật ngày 27 tháng 10 năm 2020</div>
+                            <a onclick="share()" id="a_share" href="#"><img src="https://cdn0.iconfinder.com/data/icons/social-circle-3/72/Facebook-512.png" alt=""></a>
+                            <a onclick="share()" id="a_share1" href="#"><img src="https://cdn3.iconfinder.com/data/icons/2018-social-media-logotypes/1000/2018_social_media_popular_app_logo_twitter-512.png" alt=""></a>
+                            <div id="share"><img src="https://cdn3.iconfinder.com/data/icons/web-31/24/share-512.png" alt=""><div id="slgshare1"></div></div>
+                        </div>          
+                        <div id="thongtin_1">1.Theo dõi các triệu chứng</div>
+                        <div id="thongtin_2">
+                            Những người mắc bệnh COVID-19 đã có một loạt các triệu chứng được báo cáo - từ các triệu chứng nhẹ đến bệnh nghiêm trọng. Các triệu chứng có thể xuất hiện 2-14 ngày sau khi phơi nhiễm với vi-rút. Những người có các triệu chứng này có thể nhiễm COVID-19:
+                        </div>
+                        <ul id="thongtin_3">
+                            <li>Sốt hoặc ớn lạnh</li>
+                            <li>Ho</li>
+                            <li>Hụt hơi hoặc khó thở</li>
+                            <li>Mệt mỏi</li>
+                            <li>Đau cơ hoặc đau người</li>
+                            <li>Đau đầu</li>
+                            <li>Mới mất vị giác hoặc khứu giác</li>
+                            <li>Đau họng</li>
+                            <li>Ngạt mũi hoặc chảy nước mũi</li>
+                            <li>Buồn nôn hoặc nôn mửa</li>
+                            <li>Tiêu chảy</li>
+                        </ul >
+                        <div id="thongtin_4"> <b>Lưu ý ! </b>: Danh sách này không bao gồm tất cả các triệu chứng có thể xuất hiện. Chúng tôi sẽ tiếp tục cập nhật danh sách này khi chúng tôi tìm hiểu thêm về COVID-19.</div>
+                        <div id="thongtin_5">2.Theo dõi triễu chứng theo từng ngày</div>
+                        <div id="thongtin_6">Nhóm các chuyên gia đến từ Đại học Vũ Hán (Trung Quốc) công bố kết quả nghiên cứu về diễn biến triệu chứng bệnh do Covid-19 theo từng ngày, sau khi tiến hành quan sát trên 140 bệnh nhân nhiễm Covid-19 tại Bệnh viện Nam Sơn (Trung Quốc).</div>
+                        <div id="thongtin_7">Theo nghiên cứu, 99% bệnh nhân đều có hiện tượng thân nhiệt cao. Hơn 50% bệnh nhân có hiện tượng mệt mỏi, ho khan. 1/3 trong tổng số 140 ca bệnh xuất hiện tình trạng đau cơ và khó thở.</div>
+                        <div id="thongtin_8">Trước đó, Trung tâm Kiểm soát và Phòng ngừa Dịch bệnh Trung Quốc cho biết, có khoảng 80% các trường hợp nhiễm covid-19 có triệu chứng ở mức nhẹ, 15% bệnh nhân có triệu chứng nặng và 5% là các ca bệnh nguy kịch.</div>
+                        <div id="thongtin_9">Diễn biến triệu chứng covid-19 theo từng ngày được nhóm nghiên cứu tổng kết cụ thể như sau:</div>
+                        <div class="thong_tin10">
+                            <div class="day">Ngày 1:</div>
+                            <div class="thong_tin_inform">Bệnh nhân bắt đầu có hiện tượng sốt, mệt mỏi, đau nhức cơ bắp, ho khan. Hiện tượng tiêu chảy hoặc buồn nôn có thể xuất hiện trong 1 hoặc 2 ngày trước khi sốt nhưng hiếm hơn.</div>
+                        </div>
+                        <div class="thong_tin10">
+                            <div class="day">Ngày 5:</div>
+                            <div class="thong_tin_inform">Bệnh nhân có thể đối mặt với tình trạng khó thở, đặc biệt là người già hoặc người có sẵn các bệnh lý nền.</div>
+                        </div>
+                        <div class="thong_tin10">
+                            <div class="day">Ngày 7:</div>
+                            <div class="thong_tin_inform">Theo nghiên cứu của Đại học Vũ Hán, đây chính là thời điểm mà hầu hết các bệnh nhân sẽ chủ động nhập viện, do các triệu chứng covid-19 đã đề cập trước đó gây ra.</div>
+                        </div>
+                        <div class="thong_tin10">
+                            <div class="day">Ngày 8:</div>
+                            <div class="thong_tin_inform">Vào thời điểm này, bệnh nhân ở trường hợp nặng (khoảng 15 ca bệnh theo thống kê của CDC Trung Quốc) sẽ mắc Hội chứng Suy hô hấp cấp tiến triển, hội chứng bệnh lý thường xuất hiện khi dịch lỏng đã ngập trong tổ chức, nếu không được điều trị kịp thời sẽ dẫn đến tử vong.</div>
+                        </div>
+                        <div class="thong_tin10">
+                            <div class="day">Ngày 10:</div>
+                            <div class="thong_tin_inform">Nếu có triệu chứng bệnh lý vẫn tiếp tục nặng lên, các bệnh nhân sẽ được đưa vào phòng chăm sóc tích cực. Những bệnh nhân nặng ở giai đoạn này thường sẽ có triệu chứng đau bụng và mất cảm giác thèm ăn nghiêm trọng hơn các ca bệnh tiến triển nhẹ. Bên cạnh đó, cũng có một tỉ lệ nhỏ bệnh nhân tử vong vào thời điểm này (theo thống kê là khoảng 2%).</div>
+                        </div>
+                        <div class="thong_tin10">
+                            <div class="day">Ngày 17:</div>
+                            <div class="thong_tin_inform">Thông thường, những bệnh nhân được điều trị khỏi Covid-19 sẽ hồi phục và được ra viện vào thời điểm này, nghĩa là sau 2,5 tuần kể từ khi bắt đầu có triệu chứng bệnh.</div>
+                        </div>
+
+                        <div id="thong_tin11">
+                            <div id="thong_tin11_1" style="text-decoration: underline;">Thời điểm nên tìm kiếm chăm sóc y tế khẩn cấp</div>
+                            <div id="thong_tin11_2">Tìm các dấu hiệu cảnh báo cấp cứu* của COVID-19. Nếu có người đang biểu hiện bất cứ dấu hiệu nào trong số này, hãy tìm đến dịch vụ cấp cứu y tế ngay lập tức:</div>
+                            <ul  id="thong_tin11_3">
+                                <li>Khó thở</li>
+                                <li>Đau hoặc tức ngực thường xuyên</li>
+                                <li>Trạng thái lẫn lộn mới</li>
+                                <li>Không thể thức dậy hay duy trì sự tỉnh táo</li>
+                                <li>Môi hoặc mặt xanh tái</li>
+                            </ul>
+                            <div id="thong_tin11_4"><b>Lưu ý !</b> : Danh sách này không bao gồm tất cả các triệu chứng có thể xuất hiện. Hãy gọi ngay cho nhà cung cấp dịch vụ y tế của quý vị về bất kỳ triệu chứng nào nghiêm trọng hoặc đáng lo đối với quý vị.</div>
+                            <div id="thong_tin11_5">Gọi 911 hoặc gọi trước cho cơ sở cấp cứu địa phương: Thông báo cho nhân viên trực tổng đài rằng quý vị đang tìm kiếm sự chăm sóc cho một người nhiễm hoặc có thể nhiễm COVID-19.</div>
+                        </div>
+
+                    </div>
+                    <div id="covid_benphai">
+                        <div id="thong_tin12">
+                            <div id="thong_tin12_1" style="text-decoration: underline;">Những điều quý vị cần biết</div>
+                            <ul id="thong_tin12_2">
+                                <li>Bất cứ ai cũng có thể có các triệu chứng từ nhẹ đến nghiêm trọng.</li>
+                                <li>Người lớn tuổi và những người có các tình trạng bệnh nền nghiêm trọng như bệnh tim hoặc phổi hoặc bệnh tiểu đường dường như có nguy cơ cao hơn phát triển các biến chứng nghiêm trọng hơn từ bệnh COVID-19.</li>
+                            </ul>
+                        </div>
+                        <div class="covid_benphai_title">Triệu chứng của covid 19</div>
+                        <a href="https://tuoitre.vn/phan-biet-cac-trieu-chung-cua-covid-19-voi-cum-cam-lanh-di-ung-20200313095622042.html">
+                            <img id="covid_benphai_img" src="https://static.mediacdn.vn/tuoitre/web_images/tto_default_avatar.png" alt="">
+                            <div class="tintuc_title">
+                                <div style="color: rgb(34, 34, 197);text-decoration: underline;">Phân biệt các triệu chứng của COVID-19 với cúm, cảm lạnh, dị ứng</div>
+                                <div>TTO - Cùng là những bệnh tác động tới hệ hô hấp của con người </div>
+                            </div>
+                        </a>
+                        <a href="https://vi.wikipedia.org/wiki/B%E1%BB%87nh_virus_corona_2019">
+                            <img id="covid_benphai_img" src="https://i2.wp.com/zchannel.org/wp-content/uploads/2020/09/wikipedia.jpg?ssl=1" alt="">
+                            <div class="tintuc_title">
+                                <div style="color: rgb(34, 34, 197);text-decoration: underline;">Bệnh virus corona 2019</div>
+                                <div>Bài này viết về một căn bệnh gây ra bởi virus SARS-CoV-2 (trước đây là 2019-nCoV)</div>
+                            </div>
+                        </a>
+                        <a href="https://www.hoihendumdlstphcm.org.vn/index.php/kien-thuc-y-khoa/371-virus-corona-moi-2019-ncov-covid-19-sars-cov-2-la-gi">
+                            <img id="covid_benphai_img" src="https://i.ytimg.com/vi/6TfFKauZl40/maxresdefault.jpg" alt="">
+                            <div class="tintuc_title">
+                                <div style="color: rgb(34, 34, 197);text-decoration: underline;">Dấu hiệu và triệu chứng của covid 19</div>
+                                <div>Những người bị nhiễm bệnh có thể không có triệu chứng hoặc có các triệu chứng cơ năng từ nhẹ đến nặng</div>
+                            </div>
+                        </a>
+                        <a href="https://www.cih.com.vn/khoa-noi-khoa-ngoai/2242-nhan-biet-trieu-chung-cua-corona-covid19.html">
+                            <img id="covid_benphai_img" src="data:image/jpeg;base64,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" alt="">
+                            <div class="tintuc_title">
+                                <div style="color: rgb(34, 34, 197);text-decoration: underline;">Nhận biết triệu chứng của corona (covid-19)</div>
+                                <div>Virus corona có những triệu chứng điển hình. Tuy nhiên, nó gần giống với triệu chứng nhiễm virus do</div>
+                            </div>
+                        </a>
+                        <a href="https://baoquocte.vn/10-phat-hien-moi-nhat-ve-cac-trieu-chung-mac-covid-19-113216.html" style="border-bottom: none;border-right: 1px solid black;">
+                            <img id="covid_benphai_img" src="https://baoquocte.vn/stores/site_data_data/administrator/122015/31/11/115447_thegioivietnam_logo_share.png" alt="">
+                            <div class="tintuc_title">
+                                <div style="color: rgb(34, 34, 197);text-decoration: underline;">10 phát hiện mới nhất về các triệu chứng mắc Covid-19</div>
+                                <div>TGVN. Để hiểu rõ hơn về bệnh viêm đường hô hấp Covid-19 nguy hiểm và bí ẩn, cũng như các triệu chứng rõ</div>
+                            </div>
+                        </a>
+                        <div class="covid_benphai_title">Video về triệu chứng covid 19 </div>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/raWtkK0Nhzo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/3RIpe8w45QY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/ErIGHEWcsis" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/10GZ29OzhOE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div id="thongtin_mobile">
+                    <div class="covid_benphai_title">Triệu chứng của covid 19</div>
+                    <a href="https://tuoitre.vn/phan-biet-cac-trieu-chung-cua-covid-19-voi-cum-cam-lanh-di-ung-20200313095622042.html">
+                        <img style="border: 1px solid rgb(107, 107, 107);" id="covid_benphai_img" src="https://static.mediacdn.vn/tuoitre/web_images/tto_default_avatar.png" alt="">
+                        <div class="tintuc_title">
+                            <div style="color: rgb(34, 34, 197);text-decoration: underline;">Phân biệt các triệu chứng của COVID-19 với cúm, cảm lạnh, dị ứng</div>
+                            <div>TTO - Cùng là những bệnh tác động tới hệ hô hấp của con người </div>
+                        </div>
+                    </a>
+                    <a href="https://vi.wikipedia.org/wiki/B%E1%BB%87nh_virus_corona_2019">
+                        <img style="border: 1px solid rgb(107, 107, 107);" id="covid_benphai_img" src="https://i2.wp.com/zchannel.org/wp-content/uploads/2020/09/wikipedia.jpg?ssl=1" alt="">
+                        <div class="tintuc_title">
+                            <div style="color: rgb(34, 34, 197);text-decoration: underline;">Bệnh virus corona 2019</div>
+                            <div>Bài này viết về một căn bệnh gây ra bởi virus SARS-CoV-2 (trước đây là 2019-nCoV)</div>
+                        </div>
+                    </a>
+                    <a href="https://www.hoihendumdlstphcm.org.vn/index.php/kien-thuc-y-khoa/371-virus-corona-moi-2019-ncov-covid-19-sars-cov-2-la-gi">
+                        <img style="border: 1px solid rgb(107, 107, 107);" id="covid_benphai_img" src="https://i.ytimg.com/vi/6TfFKauZl40/maxresdefault.jpg" alt="">
+                        <div class="tintuc_title">
+                            <div style="color: rgb(34, 34, 197);text-decoration: underline;">Dấu hiệu và triệu chứng của covid 19</div>
+                            <div>Những người bị nhiễm bệnh có thể không có triệu chứng hoặc có các triệu chứng cơ năng từ nhẹ đến nặng</div>
+                        </div>
+                    </a>
+                    <a href="https://www.cih.com.vn/khoa-noi-khoa-ngoai/2242-nhan-biet-trieu-chung-cua-corona-covid19.html">
+                        <img style="border: 1px solid rgb(107, 107, 107);" id="covid_benphai_img" src="data:image/jpeg;base64,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" alt="">
+                        <div class="tintuc_title">
+                            <div style="color: rgb(34, 34, 197);text-decoration: underline;">Nhận biết triệu chứng của corona (covid-19)</div>
+                            <div>Virus corona có những triệu chứng điển hình. Tuy nhiên, nó gần giống với triệu chứng nhiễm virus do</div>
+                        </div>
+                    </a>
+                    <a href="https://baoquocte.vn/10-phat-hien-moi-nhat-ve-cac-trieu-chung-mac-covid-19-113216.html" >
+                        <img style="border: 1px solid rgb(107, 107, 107);" id="covid_benphai_img" src="https://baoquocte.vn/stores/site_data_data/administrator/122015/31/11/115447_thegioivietnam_logo_share.png" alt="">
+                        <div class="tintuc_title">
+                            <div style="color: rgb(34, 34, 197);text-decoration: underline;">10 phát hiện mới nhất về các triệu chứng mắc Covid-19</div>
+                            <div>TGVN. Để hiểu rõ hơn về bệnh viêm đường hô hấp Covid-19 nguy hiểm và bí ẩn, cũng như các triệu chứng rõ</div>
+                        </div>
+                    </a>
+                    <div class="covid_benphai_title">Video về triệu chứng covid 19 </div>
+                    <div class="slideshow-container">
+                        <div class="mySlides12 fade">
+                          <!-- <div class="numbertext">1 / 3</div> -->
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/raWtkK0Nhzo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                          <!-- <div class="text">Caption Text</div> -->
+                        </div>
+                        
+                        <div class="mySlides12 fade">
+                          <!-- <div class="numbertext">2 / 3</div> -->
+                      <iframe width="560" height="315" src="https://www.youtube.com/embed/3RIpe8w45QY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                          <!-- <div class="text">Caption Two</div> -->
+                        </div>
+                        
+                        <div class="mySlides12 fade">
+                          <!-- <div class="numbertext">3 / 3</div> -->
+                      <iframe width="560" height="315" src="https://www.youtube.com/embed/ErIGHEWcsis" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                          <!-- <div class="text">Caption Three</div> -->
+                        </div>
+                        
+                        <!-- <a class="prev" onclick="plusSlides(-1)">&#10094;</a> -->
+                        <!-- <a class="next" onclick="plusSlides(1)">&#10095;</a> -->
+                        
+                        </div>
+                        <br>
+                        
+                        <div style="text-align:center;margin-top: -5px;" >
+                          <span class="dot1" onclick="currentSlide(1)"></span> 
+                          <span class="dot1" onclick="currentSlide(2)"></span> 
+                          <span class="dot1" onclick="currentSlide(3)"></span> 
+                        </div>        
+                </div>
+            </div>
+            <div id="phongngua">
+                <div id="phongngua_inform">
+                    <div id="covid_bentrai">
+                        <div id="thongtin_title">Phòng ngừa Covid 19</div>
+                        <div id="thongtin_bentrai1">
+                            <div id="thongtin_capnhat">Cập nhật ngày 27 tháng 10 năm 2020</div>
+                            <a onclick="share()" id="a_share" href="#"><img src="https://cdn0.iconfinder.com/data/icons/social-circle-3/72/Facebook-512.png" alt=""></a>
+                            <a onclick="share()" id="a_share1" href="#"><img src="https://cdn3.iconfinder.com/data/icons/2018-social-media-logotypes/1000/2018_social_media_popular_app_logo_twitter-512.png" alt=""></a>
+                            <div id="share"><img src="https://cdn3.iconfinder.com/data/icons/web-31/24/share-512.png" alt=""><div id="slgshare2"></div></div>
+                        </div> 
+                        
+                        <div id="phongchong_title">1.Rửa tay thường xuyên</div>
+                        <ul>
+                            <li>Rửa tay thường xuyên bằng xà phòng và nước trong tối thiểu 20 giây đặc biệt là sau khi đến khu vực công cộng hoặc sau khi xì mũi, ho hoặc hắt hơi.</li>
+                            <li>
+                                <div>Điều đặc biệt quan trọng là cần rửa tay:</div>
+                                <ul>
+                                    <li>Trước khi ăn hoặc chuẩn bị đồ ăn</li>
+                                    <li>Trước khi chạm vào mặt quý vị</li>
+                                    <li>Sau khi dùng toa-lét</li>
+                                    <li>Sau khi rời khỏi khu vực công cộng</li>
+                                    <li>Sau khi xì mũi, ho hoặc hắt hơi</li>
+                                    <li>Sau khi cầm khẩu trang của quý vị</li>
+                                    <li>Sau khi thay bỉm</li>
+                                    <li>Sau khi chăm sóc người bệnh</li>
+                                    <li>Sau khi chạm vào động vật hoặc thú nuôi</li>
+                                </ul>
+                            </li>
+                            <li>Nếu không có xà phòng và nước,<b>sử dụng dung dịch sát trùng tay chứa tối thiểu 60% cồn</b> . Xoa dung dịch đều ra toàn bộ bàn tay và chà hai tay vào nhau cho đến khi khô.</li>
+                            <li><b>Tránh chạm vào mắt, mũi và miệng</b>> bằng tay chưa rửa sạch.</li>
+                        </ul>
+                        
+                    
+                        <div id="phongchong_title">2.Tránh tiếp xúc gần</div>
+                        <ul>
+                            <li>
+                                <div><b>Bên trong nhà quý vị:</b> Tránh tiếp xúc gần với người bị bệnh.</div>
+                                <ul><li>Nếu có thể, hãy duy trì khoảng cách 6 feet hoặc 2 mét giữa người bị bệnh và những người sống cùng nhà.</li></ul>
+                            </li>
+                            <li>
+                                <div><b>Bên ngoài nhà quý vị:</b> Giữ khoảng cách 6 feet với những người không cùng sống trong nhà quý vị.</div>
+                                <ul>
+                                    <li>Hãy nhớ rằng một số người không có triệu chứng có thể có khả năng lây truyền vi-rút.</li>
+                                    <li>Giữ khoảng cách tối thiểu 6 feet (tương đương chiều dài 2 sải tay) với người khác.</li>
+                                    <li>Duy trì khoảng cách với người khác là đặc biệt quan trọng đối với những người có nguy cơ cao hơn mắc bệnh rất nghiêm trọng.</li>
+                                </ul>
+                            </li>    
+                        </ul>
+                    
+                    
+                        
+                        <div id="phongchong_title">3.Che miệng và mũi bằng khẩu trang khi ở gần người khác</div>
+                        <ul>
+                            <li>Khẩu trang giúp ngăn ngừa nguy cơ bị nhiễm hoặc lây lan vi-rút.</li>
+                            <li>Quý vị có thể lây lan COVID-19 cho người khác ngay cả khi quý vị không cảm thấy mắc bệnh.</li>
+                            <li>
+                                <div>Mọi người nên đeo khẩu trang tại những địa điểm công cộng và khi ở gần những người không sống trong nhà của quý vị, đặc biệt khi khó duy trì các biện pháp cách ly giao tiếp xã hội.</div>
+                                <ul><li>Không nên đeo khẩu trang cho trẻ em dưới 2 tuổi, bất cứ ai bị khó thở, hoặc bất tỉnh, mất khả năng hoặc không thể tự tháo khẩu trang mà không có sự trợ giúp.</li></ul>
+                            </li>
+                            <li>KHÔNG sử dụng khẩu trang dành cho nhân viên y tế. Hiện tại, mặt nạ y tế và mặt nạ N95 là nguồn cung cấp quan trọng cần dành riêng cho nhân viên chăm sóc sức khỏe và những người ứng phó đầu tiên khác.</li>
+                            <li>Tiếp tục giữ khoảng cách 6 feet hoặc 2 mét giữa quý vị và người khác. Đeo khẩu trang không thay thế cho biện pháp cách ly giao tiếp xã hội.</li>
+                        </ul>
+                        
+                        
+                      
+                        <div id="phongchong_title">4.Che miệng khi ho và hắt hơi</div>
+                        <ul>
+                            <li><b>Luôn luôn che miệng và mũi bằng khăn giấy</b> khi quý vị ho hoặc hắt hơi hoặc sử dụng bên trong khuỷu tay và không khạc nhổ.</li>
+                            <li><b>Vứt khăn giấy</b> vào thùng rác.</li>
+                            <li>Ngay lập tức <b>rửa sạch tay</b> bằng xà phòng và nước trong ít nhất 20 giây. Nếu không có sẵn nước và xà phòng, hãy vệ sinh tay bằng dung dịch sát trùng tay có chứa ít nhất 60% cồn.</li>
+                        </ul>
+                      
+                        
+                        
+                        <div id="phongchong_title">5.Vệ sinh và khử trùng</div>
+                        <ul>
+                            <li><b>Vệ sinh VÀ khử trùng những bề mặt thường xuyên tiếp xúc</b> hàng ngày. Bao gồm bàn, tay nắm cửa, công tắc đèn, mặt kệ bếp, tay nắm, bàn làm việc, điện thoại, bàn phím, toa-lét, vòi nước và bồn rửa.</li>
+                            <li><b>Nếu bề mặt bị bẩn, hãy làm sạch chúng</b>. Sử dụng chất tẩy rửa hoặc xà phòng và nước trước khi khử trùng.</li>
+                            <li><b>Sau đó, sử dụng chất khử trùng gia dụng.</b> Hầu hết các chất khử trùng gia dụng có đăng ký EPAbiểu tượng bên ngoài phổ biến sẽ có hiệu quả.</li>
+                        </ul>
+                        
+                        <div id="phongchong_title">6.Theo dõi sức khỏe của quý vị mỗi ngày</div>
+                        <ul>
+                            <li>
+                                <div><b>Cảnh giác với các triệu chứng.</b> Theo dõi sốt, ho, hụt hơi hoặc <b>các triệu chứng khác của COVID-19.</b></div>
+                                <ul><li>Đặc biệt quan trọng nếu quý vị đang chạy việc vặt thiết yếu, tới văn phòng hoặc nơi làm việc và ở các môi trường khó có thể giữ khoảng cách 6 feet với người khác.</li></ul>
+                            </li>
+                            <li>
+                                <div><b>Đo thân nhiệt</b> nếu thấy các triệu chứng diễn tiến.</div>
+                                <ul><li>Không đo thân nhiệt trong vòng 30 phút sau khi tập thể dục hoặc uống thuốc có thể làm hạ thân nhiệt của quý vị như acetaminophen.</li></ul>
+                            </li>
+                            <li>Làm theo Hướng dẫn của CDC nếu các triệu chứng tiến triển.</li>
+                        </ul>
+                        
+                        <div id="phongchong_title">7.Bảo vệ sức khỏe của quý vị trong mùa cúm này</div>
+                        <div class="margin_5">Vi-rút cúm và vi-rút gây ra COVID-19 <b>cả hai</b> đều có thể sẽ lây lan vào mùa thu và mùa đông này. Hệ thống chăm sóc sức khỏe có thể bị quá tải khi điều trị cả bệnh nhân mắc bệnh cúm và COVID-19. Điều này có nghĩa là tiêm phòng vắc-xin cúm trong giai đoạn 2020-2021 đóng vai trò quan trọng hơn bao giờ hết.</div>
+                        <div class="margin_5">Mặc dù việc tiêm phòng vắc-xin cúm sẽ không bảo vệ mọi người khỏi lây nhiễm COVID-19, tuy nhiên có thể mang lại nhiều lợi ích quan trọng, chẳng hạn như:</div>
+                        <div class="margin_5">1.Vắc-xin cúm đã được chứng minh là có tác dụng làm giảm nguy cơ mắc bệnh cúm, nhập viện và tử vong.</div>
+                        <div class="margin_5">2.Tiêm phòng vắc-xin cúm cũng có thể tiết kiệm nguồn lực chăm sóc sức khỏe để chăm sóc bệnh nhân mắc COVID-19.</div>
+                        
+                    </div>
+                    <div id="covid_benphai">
+                        <div id="phongchong_thongbao">
+                            <div id="phongchong_thongbao1">
+                                <div>Lưu ý !! :</div> 
+                                <img id="nhapnhay" src="https://cdn3.iconfinder.com/data/icons/basicolor-signs-warnings/24/181_warning_notice-256.png" alt="">
+                            </div>
+                            <div id="phongchong_thongbao2">Tuy trong nước đã không xuất hiện các trường hợp nhiễm covid 19 nhưng chúng ta vẫn nên nâng cao cảnh giác phòng chống dịch bệnh bùng phát trở lại .</div>
+                        </div>
+                        <div class="covid_benphai_title">Triệu chứng của covid 19</div>
+                        <a href="https://tuoitre.vn/phan-biet-cac-trieu-chung-cua-covid-19-voi-cum-cam-lanh-di-ung-20200313095622042.html">
+                            <img id="covid_benphai_img" src="https://static.mediacdn.vn/tuoitre/web_images/tto_default_avatar.png" alt="">
+                            <div class="tintuc_title">
+                                <div style="color: rgb(34, 34, 197);text-decoration: underline;">Phân biệt các triệu chứng của COVID-19 với cúm, cảm lạnh, dị ứng</div>
+                                <div>TTO - Cùng là những bệnh tác động tới hệ hô hấp của con người </div>
+                            </div>
+                        </a>
+                        <a href="https://vi.wikipedia.org/wiki/B%E1%BB%87nh_virus_corona_2019">
+                            <img id="covid_benphai_img" src="https://i2.wp.com/zchannel.org/wp-content/uploads/2020/09/wikipedia.jpg?ssl=1" alt="">
+                            <div class="tintuc_title">
+                                <div style="color: rgb(34, 34, 197);text-decoration: underline;">Bệnh virus corona 2019</div>
+                                <div>Bài này viết về một căn bệnh gây ra bởi virus SARS-CoV-2 (trước đây là 2019-nCoV)</div>
+                            </div>
+                        </a>
+                        <a href="https://www.hoihendumdlstphcm.org.vn/index.php/kien-thuc-y-khoa/371-virus-corona-moi-2019-ncov-covid-19-sars-cov-2-la-gi">
+                            <img id="covid_benphai_img" src="https://i.ytimg.com/vi/6TfFKauZl40/maxresdefault.jpg" alt="">
+                            <div class="tintuc_title">
+                                <div style="color: rgb(34, 34, 197);text-decoration: underline;">Dấu hiệu và triệu chứng của covid 19</div>
+                                <div>Những người bị nhiễm bệnh có thể không có triệu chứng hoặc có các triệu chứng cơ năng từ nhẹ đến nặng</div>
+                            </div>
+                        </a>
+                        <a href="https://www.cih.com.vn/khoa-noi-khoa-ngoai/2242-nhan-biet-trieu-chung-cua-corona-covid19.html">
+                            <img id="covid_benphai_img" src="data:image/jpeg;base64,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" alt="">
+                            <div class="tintuc_title">
+                                <div style="color: rgb(34, 34, 197);text-decoration: underline;">Nhận biết triệu chứng của corona (covid-19)</div>
+                                <div>Virus corona có những triệu chứng điển hình. Tuy nhiên, nó gần giống với triệu chứng nhiễm virus do</div>
+                            </div>
+                        </a>
+                        <a href="https://baoquocte.vn/10-phat-hien-moi-nhat-ve-cac-trieu-chung-mac-covid-19-113216.html" style="border-bottom: none;border-right: 1px solid black;">
+                            <img id="covid_benphai_img" src="https://baoquocte.vn/stores/site_data_data/administrator/122015/31/11/115447_thegioivietnam_logo_share.png" alt="">
+                            <div class="tintuc_title">
+                                <div style="color: rgb(34, 34, 197);text-decoration: underline;">10 phát hiện mới nhất về các triệu chứng mắc Covid-19</div>
+                                <div>TGVN. Để hiểu rõ hơn về bệnh viêm đường hô hấp Covid-19 nguy hiểm và bí ẩn, cũng như các triệu chứng rõ</div>
+                            </div>
+                        </a>
+                        <div class="covid_benphai_title">Video về triệu chứng covid 19 </div>
+                        <iframe style="margin-top: 5px;" src="https://www.youtube.com/embed/raWtkK0Nhzo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe  src="https://www.youtube.com/embed/3RIpe8w45QY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe  src="https://www.youtube.com/embed/ErIGHEWcsis" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe  src="https://www.youtube.com/embed/10GZ29OzhOE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <img width="90%" style="margin-top: 5px;" src="https://assets.grab.com/wp-content/uploads/sites/11/2020/03/13151849/grab7-min.jpg" alt="">
+                    </div>
+                </div>    
+                <div id="lienhebacsi_text">Liên hệ bác sĩ </div>
+                <div id="lienhebacsi">
+                    <div id="lienhebacsi_trai">
+                        <img src="..\covid-19\doctor-removebg-preview.png" alt="">
+                        <!-- <img src=".\C4T-B13\doctor-removebg-preview.png" alt=""> -->
+                        <div id="lienhebacsi_đuongdaynong">
+                            <div id="lienhebacsi_đuongdaynong_text">liên hệ với bác sĩ bằng đường dây nóng</div>
+                            <div id="lienhebacsi_sdt">
+                                <div id="lienhebacsi_sdt1">19003228</div>
+                                <div id="lienhebacsi_sdt2">19119048</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="lienhebacsi_phai">
+                        <div id="lienhebacsi_phai_text">chung tay cùng cộng đồng đẩy lùi dịch covid 19 bằng cách tham gia và tìm hiểu trang web</div>
+                        <div id="flex-1">
+                            <div id="lienhebacsi_phai_link">
+                                <a href="https://bluezone.gov.vn/">blue zone : cài đặt ứng dụng để nhận biết và tránh bị lây nhiễm covid 19 một </a>
+                                <img src="https://binhphuoc.gov.vn/uploads/binhphuoc/news/2020_08/bluezone_1.png" alt="">
+                            </div>
+                            <div id="lienhebacsi_phai_link">
+                                <a href="https://www.who.int/">Coronavirus disease (COVID-19) - who.int : cập nhật tình hình covid 19 trên </a>
+                                <img src="https://www.who.int/images/default-source/infographics/logo-who.tmb-1200v.jpg?Culture=en&sfvrsn=2fcc68a0_15" alt="">
+                            </div>
+                        </div>    
+                            
+                        <div id="flex-1">
+                            <div id="lienhebacsi_phai_link">
+                                <a href="https://vtvgo.vn/trang-chu.html">VTV Go : nơi bạn có thể xem bản tin về tình hình dịch covid 19 và tin tức mới </a>
+                                <img src="https://cdn.tgdd.vn/2020/07/content/2-cach-xem-vtv-go-tren-may-tinh-don-gian-nhat-thumb-800x450.jpg" alt="">
+                            </div>
+                            <div id="lienhebacsi_phai_link">
+                                <a href="https://ncov.moh.gov.vn/">bộ y tế : cập nhật tin tức chính xác về dịch bệnh trong nước</a>
+                                <img src="https://ncov.moh.gov.vn/image/journal/article?img_id=7121139&t=1599020228218" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="lienhebacsi_mobile">
+                    <div id="lienhebacsi_trai">
+                        <img src="C:\Users\Admin\Desktop\C4T-B13\doctor-removebg-preview.png" alt="">
+                        <!-- <img src=".\C4T-B13\doctor-removebg-preview.png" alt=""> -->
+                        <div id="lienhebacsi_đuongdaynong">
+                            <div id="lienhebacsi_đuongdaynong_text">liên hệ với bác sĩ bằng đường dây nóng</div>
+                            <div id="lienhebacsi_sdt">
+                                <div id="lienhebacsi_sdt1">19003228  </div>
+                                <div id="lienhebacsi_sdt2">  19119048</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="lienhebacsi_phai">
+                        <div id="lienhebacsi_phai_text">chung tay cùng cộng đồng đẩy lùi dịch covid 19 bằng cách tham gia và tìm hiểu trang web</div>
+                        <div id="flex-1">
+                            <div id="lienhebacsi_phai_link">
+                                <a href="https://bluezone.gov.vn/">blue zone : cài đặt ứng dụng để nhận biết và tránh bị lây nhiễm covid 19 một </a>
+                                <img src="https://binhphuoc.gov.vn/uploads/binhphuoc/news/2020_08/bluezone_1.png" alt="">
+                            </div>
+                            <div id="lienhebacsi_phai_link">
+                                <a href="https://www.who.int/">Coronavirus disease (COVID-19) - who.int : cập nhật tình hình covid 19 trên </a>
+                                <img src="https://www.who.int/images/default-source/infographics/logo-who.tmb-1200v.jpg?Culture=en&sfvrsn=2fcc68a0_15" alt="">
+                            </div>
+                        </div>    
+                            
+                        <div id="flex-1">
+                            <div id="lienhebacsi_phai_link">
+                                <a href="https://vtvgo.vn/trang-chu.html">VTV Go : nơi bạn có thể xem bản tin về tình hình dịch covid 19 và tin tức mới </a>
+                                <img src="https://cdn.tgdd.vn/2020/07/content/2-cach-xem-vtv-go-tren-may-tinh-don-gian-nhat-thumb-800x450.jpg" alt="">
+                            </div>
+                            <div id="lienhebacsi_phai_link">
+                                <a href="https://ncov.moh.gov.vn/">bộ y tế : cập nhật tin tức chính xác về dịch bệnh trong nước</a>
+                                <img src="https://ncov.moh.gov.vn/image/journal/article?img_id=7121139&t=1599020228218" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>    
+        <div id="tintuc">
+            <img width="100%"  src="..\covid-19\bảo trì.png" alt="">
+        </div>
+    </div>
+    <div id="quiz">  
+        <div class="scene">
+
+            <div class="upper">
+              <div class="moon">
+                <div class="crater1"></div>
+                <div class="crater2"></div>
+              </div>
+              <div class="star1"></div>
+              <div class="star2"></div>
+              <div class="star3"></div>
+              <div class="cloud1">
+                <div class="circle"></div>
+                <div class="filler"></div>
+              </div>
+              <div class="cloud2">
+                <div class="circle"></div>
+                <div class="filler"></div>
+              </div>
+              <div class="tail">
+                <div class="left"></div>
+                <div class="right"></div>
+                <div class="body"></div>
+              </div>
+        
+              <div class="drop"></div>
+        
+            </div>
+            <div class="lower">
+              <div class="whale">
+                <div class="eye"></div>
+                <div class="detail1">
+                  <div class="detail2"></div>
+                </div>
+        
+              </div>
+              <div class="fin"></div>
+            </div>
+            
+        </div>
+          
+          <div id="cuocthi_text">Cuôc thi tìm hiểu về dịch bệnh covid 19</div>
+          <div id="rule_contest">
+              <div id="rule_contest_top">
+                  <div class="rule_contest_body">
+                      <div class="rule_title">Giới thiệu cuộc thi :</div>
+                      <div>đây là cuộc thi tìm hiểu về dịch bệnh covid 19 và hiểu rõ hơn về cách phòng chống dịch bệnh <b id="den">với sự tài trợ</b> của MindX</div>
+                  </div>
+                  <div class="rule_contest_body"> 
+                      <div class="rule_title">thể lệ cuộc thi :</div>
+                      <div>bạn sẽ trả lời 30 câu hỏi được đưa ra của chương trình , mỗi câu có thời igan trả lời là 20s , đúng + 1 Đ , sai thì sẽ không được cộng điểm , người được số điểm cao sẽ nhận được quà từ chương trình</div>
+                  </div>
+                  <div class="rule_contest_body">
+                      <div class="rule_title">Trao giải :</div>
+                      <div>- Giải nhất(không giới hạn) : 30đ : bận sẽ được tặng ..... </div>
+                      <div>- Giải nhì(không giới hạn) : 20đ : bận sẽ được tặng ..... </div>
+                      <div>Lưu ý : bạn chỉ được nhận 1 trong 2 giải</div>
+                      <div>Phần quà sẽ được giai đến nhà nhanh nhất qua giao hàng tận nhà .</div>
+                      <div>Vui lòng nhập <b>chính xác</b> thông tin trong <b>phần nhập thông tin </b>để phần quà tới nơi 1 cách nhanh nhất</div>
+                  </div>
+              </div>
+          </div>      
+        <div id="join">
+            <button id="join_button" onclick="openquiz()">Tham gia cuộc thi</button>
+        </div> 
+    </div>
+
+    <div id="footer">
+        <div id="footer_container">
+            <div id="last">
+                <img src="C:\Users\Admin\Desktop\C4T-B13\logo1-removebg-preview.png" alt="">
+                <div id="camket">Chúng tôi xin cam kết sẽ đem lại những thông tin chính xác nhất và được cập nhật liên tục về dịch bệnh SARS-COV-2 trên Việt Nam và toàn thế giới.</div>
+                <div id="baiviet">Các bài viết có liên quan </div>
+                <a href="https://webkhoedep.vn/nguoi-cach-ly-tai-nha-va-gia-dinh-can-lam-gi-de-tranh-lay-nhiem-cho-cong-dong-n-35551.html">
+                    <div id="baiviet_title">phòng chống lây nhiễm trong gia đình</div>
+                    <div id="time"><img src="https://cdn4.iconfinder.com/data/icons/core-ui-outlined/32/outlined_alarm-256.png" alt=""><div>07:28 | 22/03/2020</div></div>
+                </a>
+                <a href="https://thanhnien.vn/video/the-gioi/khau-trang-rua-tay-cach-nao-giup-phong-chong-virus-corona-hieu-qua-145532.html">
+                    <div id="baiviet_title">cách rửa tay hiệu quả phòng chống covid 19 </div>
+                    <div id="time"><img src="https://cdn4.iconfinder.com/data/icons/core-ui-outlined/32/outlined_alarm-256.png" alt=""><div>07:28 | 22/03/2020</div></div>
+                </a>
+                
+                <!-- <div id="donvidonghanh_text">đơn vị đồng hành </div>
+                <div id="donvidonghanh_img">
+                    <img src="https://yt3.ggpht.com/ytc/AAUvwnjaGNbB7zbZRAMDTqwLyR1xR9A7kEP57WMD4mR3Fw=s900-c-k-c0x00ffffff-no-rj" alt="">
+                    <img src="C:\Users\Admin\Desktop\C4T-B13\logo.png" alt="">
+                </div> -->
+            </div>
+            <div id="feedback">
+                <div id="feedback_text">Feedback Form </div>
+                <div id="feedback_suggest">This is feedback form. Send us your feedback !</div>
+                <input id="feedback_name" type="text" placeholder="Your Name">
+                <input id="feedback_email" type="text" placeholder="Your Email">
+                <input id="feedback_inform" type="text" placeholder="Your suggest / feedback">
+                <button id="send_feedback" onclick="feedback()">Send Feedback</button>
+            </div>
+        </div>
+        <div id="followme">
+            <div id="followme_text">follow me</div>
+            <a id="face" href="https://www.facebook.com/tung.phung.52438174/"></a>
+            <a id="gmail" href="https://mail.google.com/mail/u/0/#inbox"></a>
+            <div id="sdt">SĐT : 0373074053</div>
+            <div id="adress">adress : Thạch Hòa - Thạch Thất - Hà Nội </div>
+            <!-- <img src="https://thinhweb.com/wp-content/uploads/2017/04/gmail.jpg" alt=""> https://d1afx9quaogywf.cloudfront.net/sites/default/files/Logos/Facebook400x230.png-->
+        </div>
+        
+    </div>
+    <div id="footer_mobile">
+        <div id="feedback">
+            <div id="feedback_text">Feedback Form </div>
+            <div id="feedback_suggest">This is feedback form. Send us your feedback !</div>
+            <input id="feedback_name" type="text" placeholder="Your Name">
+            <input id="feedback_email" type="text" placeholder="Your Email">
+            <input id="feedback_inform" type="text" placeholder="Your suggest / feedback">
+            <button id="send_feedback" onclick="feedback()">Send Feedback</button>
+        </div>
+        <div id="footer_container_mobile">
+            <img id="footer_container_mobile_img" src="..\covid-19\logo_small_covid-removebg-preview -.png" alt="">
+            <div id="camket">Chúng tôi xin cam kết sẽ đem lại những thông tin chính xác nhất và được cập nhật liên tục về dịch bệnh SARS-COV-2 trên Việt Nam và toàn thế giới.</div>
+
+            <div id="footer_container_mobile_bottom">
+                
+                <div id="footer_container_mobile_bottom_inform">
+                    <img src="https://cdn4.iconfinder.com/data/icons/multimedia-75/512/multimedia-01-256.png" alt="">
+                    <div>SĐT : 0373074053</div>
+                    
+                </div>
+                <div id="footer_container_mobile_bottom_inform">
+                    <img src="https://cdn4.iconfinder.com/data/icons/line-business/32/location-256.png" alt="">
+                    <div>adress : Thạch Hòa - Thạch Thất - Hà Nội </div>
+                </div>
+                <div id="footer_follow">
+                    <div>follow me</div>
+                    <a style="margin-left: 50%;" href="https://www.facebook.com/tung.phung.52438174/">
+                        <img src="https://cdn0.iconfinder.com/data/icons/eon-social-media-contact-info-2/32/facebook_fb_face_book-256.png" alt="">
+                    </a>
+                    <a href="https://mail.google.com/mail/u/0/#inbox">
+                        <img src="https://cdn0.iconfinder.com/data/icons/social-media-entertainment-line/32/Gmail-256.png" alt="">
+                    </a>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    
+</body>
+<script src="home.js"></script>
+</html>
+

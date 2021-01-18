@@ -1,0 +1,2594 @@
+@import url('https://fonts.googleapis.com/css2?family=Langar&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chela+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Holtwood+One+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Holtwood+One+SC&family=Josefin+Sans:wght@700&display=swap');
+
+
+
+
+
+
+*{
+    
+    text-decoration: none;
+}
+body {
+    margin: 0px;
+    background-color: #fafafb;
+}
+#container {
+    margin: 0px;
+}
+#map {
+    border-left: 11px solid wheat ;
+    width: 99%;
+    height: 600px;
+    /* background-color: rgb(66, 66, 248); */
+}
+
+#map1 {
+    width: 100%;
+    height: 600px;
+    position: relative;
+    z-index: 1;
+    /* border-left: 1px solid black;
+    border-right: 10px solid black; */
+}
+/* lam mo anh //////////////////////////////////////////////// */
+.bg-image {
+    
+    /* Add the blur effect */
+    /* filter: blur(8px); */
+    /* -webkit-filter: blur(8px); */
+    filter: opacity(60%);
+    -webkit-filter: opacity(60%);
+    /* Full height */
+    height: 100%; 
+    
+}
+  
+  /* Position text in the middle of the page/image */
+  .bg-text {
+    /* background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0, 0.4);  */
+    color: white;
+    font-weight: bold;
+    /* border: 3px solid #f1f1f1; */
+    position: absolute;
+    height: 500px;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 40%;
+    /* padding: 20px; */
+    text-align: center;
+  }
+  .bg-text img {
+      margin: 0% 0% 0%  0%;
+      width: 100%;
+      height: 100%;
+      /* background-color: red; */
+  } 
+   /*lam mo anh ////////////////////////////////////////////  */
+
+#bg-text2 {
+    position: absolute;
+    top: 60%;
+    left: 40%;
+    z-index: 4;
+    width: 20%;
+    height: 30px;
+} 
+/* #khuvuc  {
+    color: yellow;
+    position: absolute;
+    font-size: 20px;
+    display: flex;
+    z-index: 3;
+} */
+
+/* #chu_covid {
+    font-size: 200px;
+    width: 80%;
+    position: absolute;
+    left: 20%;
+    top: 17%;
+    z-index: 2;
+    color: red;
+} */
+#nava {
+    /* margin-top: 5px; */
+    display: flex;
+    width: 100%;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin: auto;
+    position: relative;
+    background-color: #2c3e50;
+    z-index: 7;
+}
+.noidung img {
+    margin-top: 2%;
+    width: 6%;
+    height: 55%;
+    margin-right: 3px;
+}
+#hientai_button {
+    float: left;
+    width: 25%;
+    height: 40px;
+    /* color: white;
+    background-color:black; */
+    font-size: 25px;
+    text-align: center;
+    line-height: 40px;
+    color: white;
+}
+#covid19_button {
+    width: 25%;
+    float: left;
+    height: 40px;
+    /* background-color: red; */
+    font-size: 25px;
+    text-align: center;
+    line-height: 40px;
+    color: white;
+}
+#covid19_button:hover {color: rgb(126, 125, 125);}
+#tintuc_button {
+    width: 25%;
+    height: 40px;
+    /* background-color: red; */
+    font-size: 25px;
+    text-align: center;
+    line-height: 40px;
+    float: left;
+    color: white;
+}
+#quiz_button {
+    color: white;
+    width: 25%;
+    height: 40px;
+    /* background-color: red; */
+    font-size: 25px;
+    text-align: center;
+    line-height: 40px;
+    float: left;
+}
+.noidung {
+    cursor: pointer;
+    z-index: 11;
+}
+/* .noidung.active {
+    background-color: #e74c3c;
+    pointer-events: none;
+  } */
+div.slider {
+    width: 25%;
+    height: 40px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    /* background-color: #e74c3c; */
+    z-index: 10;
+    /* transition: left .3s, background-color .4s; */
+  }
+  
+  #nava div:nth-child(1):hover ~ .slider,
+  #nava div:nth-child(1):focus ~ .slider,
+  #nava div:nth-child(1):active ~ .slider {
+      left: 0;
+      background-color: #3498db;
+  }
+  
+  
+  #nava div:nth-child(2):hover ~ .slider,
+  #nava div:nth-child(2):focus ~ .slider,
+  #nava div:nth-child(2):active ~ .slider{
+      left: 25%;
+      background-color: #F9F871;
+  }
+  
+  #nava div:nth-child(3):hover ~ .slider,
+  #nava div:nth-child(3):focus ~ .slider,
+  #nava div:nth-child(3):active ~ .slider{
+      left: 50%;
+      background-color: #e67e22;
+  }
+  
+  #nava div:nth-child(4):hover ~ .slider,
+  #nava div:nth-child(4):focus ~ .slider,
+  #nava div:nth-child(4):active ~ .slider{
+      left: 75%;
+      background-color: #14e0b8;
+  }
+
+
+/* mava mobie ///////////////////////////////////////// */
+#nava_mobie {
+    display: none;
+    z-index: 2;
+}
+#drop_nava {
+    width: 200px;
+    height: 30px;
+    background-color: black;
+}
+#drop_content {
+    display: none;
+}
+.noidung_mobie {
+    background-color: green;
+}
+#search1 {
+    width: 30%;
+}
+
+/* het ////////////////////////////////////////////////////// */
+.noidung:hover {
+    cursor: pointer;
+}
+#search {
+    width: 800px;
+    height: 40px;
+    background-color: red;
+    text-indent: 65%;
+}
+#search_bar {
+    margin: 1% 2px 0px 0px;
+}
+/* #button_search { */
+
+/* } */
+
+/* hien tai ///////////////////////////////////////////////////////////////// */
+#hientai {display: block;}
+*{
+    font-family: 'Poppins', sans-serif;
+}
+#hientai_title {
+    width: 100%;
+    text-align: center;
+}
+#hientai_title_1 {
+    font-size: 50px ;
+    font-family: 'Poppins', sans-serif;
+}
+#hientai_title_2 {
+    font-size: 10px ;
+    color: blue;
+}
+#hientai_{
+    display: flex;
+    height: 100px;
+    text-align: center;
+    width: 80%;
+    margin: 3px 10% 0px 10%;
+    border-top: red solid 1px;
+    border-bottom: red solid 1px;
+}
+
+.hientai_1{ 
+    margin: 0px 0px 0px 0px;
+    font-size: 17px;
+}
+.hientai_2{
+    margin: 2px 5% 0px 5%;
+    font-size: 25px;
+    width: 90%;
+    color: white;
+}
+.hientai_3{
+    margin: 2px 0px 0px 0px;
+    font-size: 10px;
+}
+.hientai_01 {
+    margin-left: 12%;
+    /* width: 500px; */
+    border-right: 1px solid black;
+    width: 25%;
+    height: 80px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.hientai_02 {
+    /* width: 500px; */
+    width: 25%;
+    height: 80px;
+    margin: 10px 0px 10px 0px;
+    border-right: 1px solid black;
+}
+.hientai_03 {
+    /* width: 500px; */
+    width: 25%;
+    height: 80px;
+    margin: 10px 0px 10px 0px;
+}
+/* slice show /////////////////// */
+#intro_bluezone {
+    width: 100%;
+    height: 430px;
+    background-color: rgb(121, 200, 206);
+    display: flex;
+    margin-top: 1px;
+}
+#bluezone_title {
+    width: 46%;
+    height: 100%;
+    margin: 0px 0px 0px 1%;
+    /* background-color: red; */
+}
+#bluezone_title1 {font-size: 30px;text-align: center;margin-top: 45px;}
+#bluezone_title2 {font-size: 65px;text-align: center;}
+#bluezone_title3 {font-size: 23px;margin-top: 35px;}
+#bluezone_title4 {font-size: 17px;}
+#bluezone_title5 {font-size: 17px;}
+#bluezone_title6 {font-size: 17px;}
+#blue_zone {
+    width: 50%;
+    margin: 15px 1% 15px 2%;
+    height: 400px;
+}
+#blue_zone img {
+    width: 100%;
+    height: 100%;
+    border: 1px solid white;
+}
+/* het ////////////////////////////// */
+#hientai_camac{
+    width: 80%;
+    height: 70px;
+    margin: 5px 10% 5px 10%;
+    border: black solid 2px;
+}
+#hientai_camac_title{
+    text-align: center;
+    font-size: 20px;
+    height: 25px;
+}
+#hientai_camac_table{
+    width: 85%;
+    margin: 0px 7% 0px 8%;
+    display: flex;
+    border-top: 1px black solid;
+    height: 55px;
+}
+#hientai_camac_table div {
+    font-size: 13px;
+    margin: 2px 0px 0px 5px;
+    width: 210px;
+    text-align: center;
+}
+/* bang ///////////////////////////////// */
+#hientai_container{
+    width: 100%;
+    margin: 10px 0px 0px 0px;
+    display: flex;
+}
+#bangthongke {
+    border: 1px solid black;
+    margin: 0px 0px 0px 3%;
+    width: 75%;
+}
+#bangthongke_title {
+    display: flex;
+}
+#bangthongke_title1 {
+    font-size: 30px;
+    width: 50%;
+    margin: 8px 0px 8px 8px;
+}
+#bangthongke_title2 {
+    display: flex;
+    border: solid 1px black;
+    width: 30%;
+    margin: 8px 2% 8px 18%;
+}
+/* #bangthongke_title2 button {
+    width: 33%;
+    border-right: solid 1px black;
+    border-left: none ;
+    border-bottom: none ;
+    border-top: none ;
+    margin: 0px 1px 0px 2px;
+} */
+#dangmac {
+    width: 33%;
+    border-right: solid 1px black;
+    border-left: none ;
+    border-bottom: none ;
+    border-top: none ;
+    margin: 0px 1px 0px 2px;
+    background-color: #F9F871;
+}
+#chuakhoi {
+    width: 33%;
+    border-right: solid 1px black;
+    border-left: none ;
+    border-bottom: none ;
+    border-top: none ;
+    margin: 0px 1px 0px 2px;
+    background-color: rgb(179, 178, 175);
+}
+#tuvong {
+    width: 33%;
+    border: none;
+    /* border-right: solid 1px black; */
+    /* border-left: none ;
+    border-bottom: none ;
+    border-top: none ; */
+    margin: 0px 1px 0px 2px;
+    background-color: rgb(179, 178, 175);
+}
+#table_dangmac {
+    display: block;
+}
+/* #table_dangmac img{
+    width: 40px;
+    height: 20px;
+} */
+#table_hang {
+    width: 100%;
+    text-align: center;
+}
+
+#table_dangmac th,td {
+    text-align: center;
+    border-left: solid 1px wheat;
+    border-right: solid 1px wheat;
+    border-bottom: 1px black solid;
+}
+#table_hang th{
+    background-color: white;
+    position: sticky;
+    table-layout: fixed;
+    top: 2px;
+}
+#table_01 {width: 7%;}
+#table_01 img {width: 60px;height: 40px;margin-left: 19px;}
+#table_02 {width: 10%;}
+#table_03 {width: 11%;}
+#table_04 {width: 10%;}
+#table_05 {width: 11%;}
+#table_06 {width: 10%;}
+#table_07 {width: 9%;}
+#table_08 {width: 9%;}
+
+#table_1 img {
+    width: 70px;
+    height: 30px;
+    border: 1px solid black;
+}
+
+#table_chuakhoi {
+    display: none;
+}
+/* #table_chuakhoi img{
+    width: 40px;
+    height: 20px;
+} */
+
+#table_chuakhoi th,td {
+    text-align: center;
+    border-left: solid 1px wheat;
+    border-right: solid 1px wheat;
+    border-bottom: 1px black solid;
+}
+#table_tuvong {
+    display: none;
+}
+/* #table_tuvong img{
+    width: 40px;
+    height: 20px;
+} */
+
+#table_tuvong th,td {
+    text-align: center;
+    border-left: solid 1px wheat;
+    border-right: solid 1px wheat;
+    border-bottom: 1px black solid;
+}
+tr {
+    height: 40px;
+    width: 100%;
+}
+th {
+    border: solid 1px black;
+}
+/* hien tai bên phải ///////////////////////////////////////// */
+#hientai_benphai {
+    /* position: fixed; */
+    width: 15%;
+    margin: 0px 0px 0px 2%;
+}
+#sticky {
+    position: sticky;
+    top: 2px;
+}
+#hientai_thongbao {
+    /* position: sticky;
+    top: 1px; */
+    border: 1px solid black;
+    width: 100%;
+}
+#hientai_thongbao1{font-size: 25px;text-align: center;margin: 15px 0px 0px 0px;}
+#hientai_thongbao2{font-size: 35px ;color: red;text-align: center;margin: 7px 0px 0px 0px;}
+#hientai_thongbao3{font-size: 25px;text-align: center;margin: 7px 0px 0px 0px;}
+#hientai_thongbao4{font-size: 35px ;color: blue;text-align: center;margin: 7px 0px 0px 0px;}
+#hientai_thongbao5{font-size: 10px;text-align: center;margin: 5px 0px 0px 0px;}
+#hientai_thongbao6{font-size: 25px;text-align: center;margin: 7px 0px 0px 0px;}
+#hientai_thongbao7{font-size: 35px ;color: yellow;text-align: center;margin: 7px 0px 0px 0px;}
+#hientai_thongbao8{font-size: 10px;text-align: center;margin: 5px 0px 0px 0px;}
+#hientai_thongbao9{font-size: 25px;text-align: center;margin: 7px 0px 0px 0px;}
+#hientai_thongbao10{font-size: 35px ;color: green;text-align: center;margin: 7px 0px 0px 0px;}
+#hientai_thongbao11{font-size: 10px;text-align: center;margin: 5px 0px 15px 0px;}
+
+#hientai_benphai img {
+    /* position: sticky;
+    top: 55%; */
+    margin-top: 10px;
+    width: 100%;
+}
+
+#lienhebacsi_text {font-size: 40px;text-align: center;width: 90%;margin-left: 5%; border-top: 1px solid black;}
+#lienhebacsi {width: 100%;margin: 10px 0px 10px 0px;display: flex;}
+
+#lienhebacsi_trai {width: 30%;margin: 0px 0px 0px 8%;border: 1px solid black;height: 450px;border-radius: 10px;}
+#lienhebacsi_trai img {height: 80%;width: 80%;margin: 5px 10% 0px 10%;}
+#lienhebacsi_duongdaynong {text-align: center;width: 90%;margin: 0px 5% 5% 5%;}
+#lienhebacsi_đuongdaynong_text{font-size: 20px;text-align: center;}
+#lienhebacsi_sdt {display: flex;text-align: center;margin-bottom: 5%;}
+#lienhebacsi_sdt1 {color: red;border-right: 1px solid black;width: 48%;font-size: 28px;}
+#lienhebacsi_sdt2 {color: red;width: 40%;font-size: 28px;}
+
+#lienhebacsi_phai {width: 45%;height: 450px;margin: 0px 0% 0px 5%;border: 1px solid black;border-radius: 17px;}
+#lienhebacsi_phai_text {font-size: 30px;margin: 2% 2% 0px 2%;height: 20%;}
+#flex-1 {display: flex;height: 34%;width: 100%;margin-top: 2%;}
+#lienhebacsi_phai_link {width: 45%;height: 100%;margin-left: 3%;border: 1px solid black;}
+#lienhebacsi_phai_link a {width: 90%;height: 40px;overflow: hidden;margin-left: 1%;}
+#lienhebacsi_phai_link img {width: 90%;height: 65%;margin-left: 5%;border: 1px solid whitesmoke;}
+
+
+#den {color: black;}
+/* covid 19 //////////////////////////////////////////////////////////////// */
+#covid19 {
+    display: none;
+}
+  
+.dropdown-content {
+    display: none;
+    position: relative;
+    right: 0;
+    top: 0;
+    background-color: #f9f9f9;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 30;
+}
+  
+.dropdown-content div {
+    color: black;
+    padding: 5px 8px;
+    text-decoration: none;
+    display: block;
+}
+  
+.dropdown-content div:hover {background-color: #f1f1f1;}
+
+#covid19_button:hover .dropdown-content {display: block;}
+  /* .dropdown:hover .dropbtn {background-color: #3e8e41;} */
+
+  /* covid 19 //////////////////////////// */
+#thongtin {
+    display: block;
+}
+#thongtin_title {
+    font-size: 300%;
+    margin: 0px 0% 0px 0%;
+}
+#thongtin_noidung {
+    display: flex;
+}
+#covid_bentrai {
+    width: 60%;
+    margin: 0px 0px 0px 5%;
+}
+
+#thongtin_bentrai1 {
+    border-top: 1px solid rgb(212, 211, 211);
+    border-bottom: 1px solid rgb(211, 209, 209);
+    margin: 0px 0% 1% 0%;
+    display: flex;
+    height: 30px;
+}
+#thongtin_bentrai1 a {
+    width: 3%;
+    height: 80%;
+}
+#thongtin_bentrai1 img {
+    width: 90%;
+    height: 90%;
+}
+#share {
+    width: 13%;
+    margin-top: 4px;
+    margin-left: 2%;
+    display: flex;
+}
+#share img {
+    margin-top: 4px;
+    width: 20%;
+    height: 55%;
+}
+#slgshare {
+    width: 55%;
+    margin-left: 5%;
+    color: rgb(60, 60, 223);
+}
+#slgshare1 {
+    width: 55%;
+    margin-left: 5%;
+    color: rgb(60, 60, 223);
+}
+#slgshare2 {
+    width: 55%;
+    margin-left: 5%;
+    color: rgb(60, 60, 223);
+}
+#thongtin_capnhat {
+    margin-top: 5px;
+    font-size: 17px;
+    color: rgb(53, 48, 48);
+}
+
+.covid_bentrai_title {
+    font-size: 163%;
+}
+.covid_title_child {
+    margin: 1% 0px 1% 0px;
+}
+
+#covid_benphai {
+    width: 28%;
+    margin: 0px 5% 0px 2%;
+    /* border: 1px solid black; */
+}
+.covid_benphai_title {
+    font-size: 35px;
+    border-bottom: 1px solid black;
+}
+#covid_benphai a {
+    margin: 5px 0px 5px 1%;
+    width: 90%;
+    display: flex;
+    height: 80px;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+}
+#covid_benphai_img {
+    width: 30%;
+    height: 90%;
+}
+.tintuc_title {
+    margin-left: 5px;
+    height: 90%;
+    overflow: hidden;
+    color: black;
+}
+#covid_benphai iframe {
+    border: 1px solid black;
+    width: 90%;
+    height: 200px;
+}
+#nhay_text {
+    font-size: 20px;
+    text-align: center;
+}
+#thongbao_benphai {
+    width: 100%;
+    height: 1000px;
+    margin-top: 10px;
+}
+/* #covid_benphai iframe {
+    width: 100%;
+    height: 40px;
+} */
+/* trieuchung /////////////////////////// */
+#trieuchung {
+    display: none;
+}
+#thongtin_1 {
+    font-size: 32px;
+}
+#thongtin_2 {
+    text-indent: 20px;
+    margin-top: 5px;
+    font-size: 16px;
+}
+#thongtin_3 {
+    font-size: 17px;
+}
+#thongtin_4 {
+    font-size: 17px;
+    margin-left: 20px;
+}
+#thongtin_5 {
+    font-size: 32px;
+}
+#thongtin_6 {
+    text-indent: 20px;
+    font-size: 16px;
+}
+#thongtin_7 {
+    font-size: 16px;
+    text-indent: 20px;
+}
+#thongtin_8 {
+    font-size: 16px;
+    text-indent: 20px;
+}
+#thongtin_9 {
+    font-size: 24px;
+}
+.thong_tin10 {
+    display: flex;
+    margin-bottom: 10px;
+}
+.day {
+    width: 7%;
+}
+.thong_tin_inform {
+    width: 80%;
+}
+
+#thong_tin11 {
+    margin: 0px 2% 0px 2%;
+    width: 96%;
+    border: 1px solid black;
+    border-radius: 15px;
+    height: 500px;
+} 
+#thong_tin11_1 {
+    font-size: 32px;
+    margin: 0px 2% 0px 2%;
+    width: 96%;
+    border-radius: 15px;
+    text-align: center;
+    margin-bottom: 1%;
+    margin-top: 1%;
+}
+#thong_tin11_2 {
+    margin: 0px 2% 0px 2%;
+    width: 96%;
+    font-size: 20px;
+    margin-bottom: 1%;
+}
+#thong_tin11_3 {
+    margin: 0px 2% 0px 2%;
+    width: 96%;
+}
+#thong_tin11_3 li {
+    font-size: 21px;
+}
+#thong_tin11_4 {
+    margin: 0px 2% 0px 2%;
+    width: 96%;
+    font-size: 18px;
+    margin-bottom: 1%;
+}
+#thong_tin11_5 {
+    font-size: 20px;
+    margin: 0px 2% 0px 2%;
+    width: 96%;
+}
+#thong_tin12 {
+    margin-top: 5px;
+    border: 1px solid black;
+}
+#thong_tin12_1 {
+    font-size: 25px;
+    text-align: center;
+}
+
+
+/* phongngua ////////////////////////////// */
+#phongngua {
+    display: none;
+}
+#phongngua_inform {
+    display: flex;
+}
+#phongchong_title {
+    font-size: 32px;
+}
+
+
+
+#phongchong_thongbao {
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 15px;
+    margin-top: 5px;
+}
+#phongchong_thongbao1 {
+    width: 60%;
+    margin-left: 3%;
+    display: flex;
+}
+#phongchong_thongbao1 div {
+    font-size: 30px;
+}
+#phongchong_thongbao img {
+    margin-top: 5px;
+    width: 40px;
+    height: 30px;
+}
+#phongchong_thongbao2 {
+    margin-top: 0px;
+    width: 90%;
+    margin-left: 5%;
+    font-size: 17px;
+    margin-bottom: 5px;
+}
+
+/* tin tuc //////////////////////////////////////////////////////////// */
+#tintuc {display: none;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*  quiz //////////////////////////////////////////////////////// */
+#quiz {
+    height: 715px;
+    display: none;
+    background-image: url('https://i.pinimg.com/originals/a4/a5/48/a4a5484cc9e7f0594f426a0afde8d372.jpg');
+    z-index: -1;
+
+}
+#rule_contest{
+    position: absolute;
+    /* z-index: 20; */
+
+    top: 120px;
+    width: 96%;
+    margin: 0px 2% 0px 2%;
+    /* background: url('https://thumbs.gfycat.com/AnimatedSmugGartersnake-mobile.mp4'); */
+}
+/* fix          //////////////////////////////////////////////////////// */
+#rule_contest_top {
+    z-index: 1;
+    display: flex;
+    margin-bottom: 10px;
+    /* height: 250px; */
+    /* background-color: blue; */
+}
+.rule_contest_body {
+    font-family: 'Langar', cursive;
+    line-height : 25px;
+    /* color: white; */
+    color: #CFCEFF;
+    margin: 30px 2% 0px 2%;
+    width: 30%;
+    height: 500px;
+    /* border: 1px solid whitesmoke; */
+    border-radius: 20px;
+}
+.rule_title {
+    /* font-family: 'Langar', cursive; */
+    border-radius: 20px;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    color: #D63B48;
+    font-size: 40px;
+}
+/* #rule_contest_bottom {
+    display: flex;
+    margin-top: 0px 0px 0px 0px;
+    height: 300px;
+}
+#top {
+    margin: 0px 0px 0px 4%;
+    width: 50%;
+    
+}
+#top_ {
+    height: 30%;
+    margin-top: 1%;
+    display: flex;
+    background-color: red;
+}
+#top_ img {
+    width: 18%;
+    height: 100%;
+}
+#top1_name , #top2_name , #top3_name{
+    margin: 1% 0px 0px 5px;
+    height: 70%;
+    font-size: 50px;
+}
+
+#donvitochuc_donghanh {
+    width: 40%;
+    background-color: blue;
+    margin: 0px 2% 0px 4%;
+}
+#donvitochuc_donghanh img {
+    width: 30px;
+    height: 40px;
+} */
+/* het fix ///////////////////////////////////////////// */
+#cuocthi_text {
+    /* font-family: 'Langar', cursive; */
+    /* font-family: 'Chela One', cursive; */
+    /* font-family: 'Holtwood One SC', serif; */
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 48px;
+    position: absolute;
+    top : 47px;
+    left: 22%;
+    z-index: 1;
+    color: #ABA9BB;
+    text-align: center;
+}
+ #join{
+    position: absolute;
+    top: 650px;
+    width: 100%;
+    text-align: center
+} 
+/*
+#rule{
+   
+}
+#prize{
+    
+} */
+#join_button {
+    width: 400px;
+    height: 50px;
+    font-size: 30px;
+    color: blue;
+}
+#noidung{
+    width: 65%;
+    margin: 0px 5% 0px 0px;
+}
+
+
+
+
+/* mau cua thanh cuon  */
+::-webkit-scrollbar {
+    max-width: 10px;
+  } 
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #C8FCEA;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: gray
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }   
+  /* het */
+
+
+
+
+
+  
+#footer {
+    margin-top: 5px;
+    width: 100%;
+    height: 400px;
+    background-image: url('https://www.kidslifestudio.com/wp-content/uploads/footer-background.jpg');
+    background-size: 50%;
+}
+
+#footer_container {
+    display: flex;
+    height: 90%;
+}
+
+#last {
+    width: 40%;
+    margin: 0px 0px 0px 5%;
+    
+}
+#last img {
+    margin: 3% 0px 0px 5%;
+    height: 15%;
+}
+#camket { 
+    margin: 5px 0px 0px 7%;
+}
+#baiviet {
+    margin: 4% 0px 3% 6%;
+    font-size: 28px;
+}
+#last a {
+    text-decoration: none;
+    color: black;
+    /* width: 60%; */
+}
+#baiviet_title {
+    margin: 1% 0px 0px 7%;
+    font-size: 19px;
+    color: black;
+}
+#time {
+    margin: 1% 0px 0px 2%;
+    display: flex;
+}
+#time img {
+    margin-top: 0px;
+    width: 4%;
+    /* height: 30%; */
+}
+#time div {
+    width: 60%;
+    margin: 3px 0px 0px 1px;
+    /* height: 30%; */
+}
+
+/* #donvidonghanh_text {
+    font-size: 30px;
+    text-align: center;
+}
+#donvidonghanh_img {
+    margin: 5px 5% 0px 5%;
+    background-color: blanchedalmond; 
+    width: 90%;
+    height: 30%;
+}
+#donvidonghanh_img img {
+    width: 30%;
+    height: 100%;
+    margin: 0px 8% 0px 9%;
+} */
+
+
+
+#feedback {
+    width: 55%;
+    margin: 1% 5% 1% 10%;
+    border: 1px white solid;
+    border-radius: 5px;
+    /* background-color: red; */
+}
+#feedback_text {
+    font-size: 35px ;
+    text-align: center;
+    margin: 10px 0px 0px 0px;
+}
+#feedback_suggest {
+    text-align: center;
+    margin: 3px;
+    width: 100%;
+}
+#feedback_name {
+    margin-top: 10px;
+    margin-left: 15%;
+    width: 70%;
+    outline: none;
+}
+#feedback_email {
+    margin-left: 15%;
+    width: 70%;
+    margin-top: 10px;
+    outline: none;
+}
+#feedback_inform {
+    text-align: start;
+    height: 30%;
+    margin-left: 15%;
+    width: 70%;
+    margin-top: 10px;
+    box-shadow: 4px black;
+    outline: none;
+}
+#send_feedback {
+    background-color: black;
+    color: white;
+    border: 1px white solid;
+    height: 10%;
+    margin-top: 10px;
+    width: 40%;
+    margin-left: 30%;
+}
+
+
+
+
+
+#followme {
+    display: flex;
+    height: 10%;
+    width: 100%;
+    background-color: black;
+}
+#followme_text {
+    margin: 2px 0px 0px 10%;
+    font-size: 25px;
+    color: white;
+}
+#face {
+    margin: 3px 10px 3px 10px;
+    width: 2%;
+    height: 80%;
+    background-size: 100%;
+    background-image: url('https://cdn2.iconfinder.com/data/icons/social-media-2151/512/1_Media_social_website_facebook-256.png');
+}
+#gmail {
+    margin: 3px 0px 3px 0px;
+    width: 2%;
+    height: 80%;
+    z-index: 1;
+    background-size: 100%;
+    background-image: url('file:///C:/Users/Admin/Desktop/C4T-B13/iconfinder_gmail_1147408%20(1).png');
+}
+#sdt {
+    margin: 6px 0px 0px 35%;
+    font-size: 20px;
+    color: white;
+}
+#adress {
+    margin: 6px 0px 0px 5%;
+    font-size: 20px;
+    color: white;
+}
+
+#bangthongke_title1_moblie {
+    display: none;
+}
+#footer_mobile {
+    display: none;
+}
+
+#text_indent {
+    text-indent: 20px;
+}
+#margin_center {
+    margin-left: 5%;
+}
+#a_share {margin-left: 44%;margin-top: 3px;}
+    #a_share1 {margin-left: 1%;margin-top: 3px}
+#thongtin_mobile {display: none;}
+#lienhebacsi_mobile {display: none;}
+/* Paste this css to your style sheet file or under head tag */
+/* This only works with JavaScript, 
+if it's not present, don't show loader */
+.no-js #loader { display: none;  }
+.js #loader { display: block; position: absolute; left: 100px; top: 0; }
+.se-pre-con {
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 9999;
+	background: url('https://smallenvelop.com/wp-content/uploads/2014/08/Preloader_11.gif') center no-repeat #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width: 739px) {
+    body {
+        /* display: none; */
+        margin: 0px;
+        font-family: 'Poppins', sans-serif;
+        /* background-color: #fafafb; */
+    }
+    #container {
+        margin: 0px;
+        width: 100%;
+    }
+    #map {
+        display: none;
+        /* border-left: 11px solid wheat ; */
+        width: 100%;
+        height: 300px;
+        /* background-color: rgb(66, 66, 248); */
+    }
+    #nava {
+        /* margin-top: 5px; */
+        display: flex;
+        width: 100%;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        margin: auto;
+        position: relative;
+        z-index: 7;
+    }
+    div.slider {
+        width: 25%;
+        height: 30px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        /* background-color: #e74c3c; */
+        z-index: 10;
+        /* transition: left .3s, background-color .4s; */
+      }
+    .noidung img {
+        width: 18%;
+        height: 50%;
+        margin-right: 0px;
+    }
+    #hientai_button {
+         width: 25%;
+        height: 30px;
+        color: white;
+        background-color:black;
+        font-size: 10px;
+        text-align: center;
+        line-height: 30px;
+        float: left;
+    }
+    #covid19_button {
+        width: 25%;
+        height: 30px;
+        color: white;
+        background-color:red;
+        font-size: 10px;
+        text-align: center;
+        line-height: 30px;
+        float: left;
+    }
+    #tintuc_button {
+        width: 25%;
+        height: 30px;
+        color: white;
+        background-color:red;
+        font-size: 10px;
+        text-align: center;
+        line-height: 30px;
+        float: left;
+    }
+    #quiz_button {
+        width: 25%;
+        height: 30px;
+        color: white;
+        background-color:red;
+        font-size: 10px;
+        text-align: center;
+        line-height: 30px;
+        float: left;
+    }
+    .noidung:hover {
+        cursor: pointer;
+    }
+    /* covid 19 //////////////////////////////////////////////////////////////// */
+    .dropdown-content {
+        display: none;
+        position: relative;
+        right: 0;
+        top: 0;
+        background-color: #f9f9f9;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 21;
+    }  
+    .dropdown-content div {
+        color: black;
+        padding: 0px 0px;
+        text-decoration: none;
+        display: block;
+    }
+    .dropdown-content div:hover {background-color: #f1f1f1;}
+    #covid19_button:hover .dropdown-content {display: block;}
+      /* .dropdown:hover .dropbtn {background-color: #3e8e41;} */
+
+    #hientai {
+        display: block;
+    }
+    #hientai_title {
+        width: 100%;
+        text-align: center;
+    }
+    #hientai_title_1 {
+        font-size: 20px ;
+        font-family: 'Poppins', sans-serif;
+    }
+    #hientai_title_2 {
+        font-size: 10px ;
+        color: blue;
+    }
+    #hientai_{
+        display: flex;
+        height: 50px;
+        width: 90%;
+        margin: 0px 5% 0px 5%;
+        border-top: red solid 1px;
+        border-bottom: red solid 1px;
+    }
+    .hientai_01{
+        width: 25%;
+        height: 40px;
+        /* margin: 10px 5% 10px 5%; */
+        margin-top: 2px;
+        margin-bottom: 2px;
+        border-right: 1px solid black;
+        /* border-left: 1px solid black; */
+    }
+    .hientai_02{
+        width: 25%;
+        height: 40px;
+        /* margin: 10px 5% 10px 5%; */
+        margin-top: 2px;
+        margin-bottom: 2px;
+        border-right: 1px solid black;
+        /* border-left: 1px solid black; */
+    }
+    .hientai_03 {
+        /* width: 500px; */
+        width: 25%;
+        height: 40px;
+        margin: 2px 0px 2px 0px;
+    }
+    .hientai_1{ 
+        margin: 0px 0px 0px 0px;
+        font-size: 8px;
+    }
+    .hientai_2{
+        margin: 2px 5% 0px 5%;
+        font-size: 12px;
+        width: 90%;
+        color: white;
+    }
+    .hientai_3{
+        margin: 2px 0px 0px 0px;
+        font-size: 7px;
+    }
+
+    /* slice show /////////////////// */
+    #intro_bluezone {
+        width: 100%;
+        height: 250px;
+        background-color: rgb(121, 200, 206);
+        display: block;
+        margin-top: 1px;
+    }
+    #bluezone_title {
+        width: 100%;
+        height: 17%;
+        margin: 0px 0px 0px 0%;
+        /* background-color: red; */
+    }
+    #bluezone_title1 {font-size: 12px;text-align: center;margin-top: 2px;}
+    #bluezone_title2 {font-size: 16px;text-align: center;}
+    #bluezone_title3 {font-size: 23px;margin-top: 35px;display: none;}
+    #bluezone_title4 {font-size: 17px;display: none;}
+    #bluezone_title5 {font-size: 17px;display: none;}
+    #bluezone_title6 {font-size: 17px;display: none;}
+    
+    #blue_zone {
+        width: 100%;
+        margin: 0px;
+        height: 83%;
+    }
+    #blue_zone img {
+        width: 97%;
+        height: 97%;
+        margin: 0px 1% 0px 1%;
+        border: 1px solid white;
+    }
+
+    /* het ////////////////////////////// */
+    #hientai_camac{
+        width: 98%;
+        height: 62px;
+        margin: 5px 1px 5px 1px;
+        border: black solid 2px;
+    }
+    #hientai_camac_title{
+        text-align: center;
+        font-size: 13px;
+        height: 25px;
+    }
+    #hientai_camac_table{
+        width: 85%;
+        margin: 0px 7% 0px 8%;
+        display: flex;
+        border-top: 1px black solid;
+        height: 55px;
+    }
+    #hientai_camac_table div {
+        font-size: 8px;
+        margin: 2px 0px 0px 5px;
+        width: 44px;
+        text-align: center;
+    }
+    /* bang ///////////////////////////////// */
+    #hientai_container{
+        width: 100%;
+        margin: 8px 0px 0px 0px;
+        /* display: flex; */
+    }
+    #bangthongke {
+        border: 1px solid black;
+        margin: 0px 1% 0px 1%;
+        width: 98%;
+    }
+    #bangthongke_title {
+        display: flex;
+        height: 30px;
+    }
+    #bangthongke_title1 {
+        display: none;
+    }
+    #bangthongke_title1_moblie {
+        display: block;
+        font-size: 16px;
+        width: 40%;
+        margin: 6px 0px 4px 4px;
+    }
+    #bangthongke_title2 {
+        display: flex;
+        border: solid 1px black;
+        width: 60%;
+        margin: 3px 1% 2px 1%;
+    }
+    #dangmac {
+        width: 33%;
+        border-right: solid 1px black;
+        border-left: none ;
+        border-bottom: none ;
+        border-top: none ;
+        margin: 0px 1px 0px 2px;
+        font-size: 8px;
+    }
+    #chuakhoi {
+        width: 33%;
+        border-right: solid 1px black;
+        border-left: none ;
+        border-bottom: none ;
+        border-top: none ;
+        margin: 0px 1px 0px 2px;
+        font-size: 8px;
+    }
+    #tuvong {
+        width: 33%;
+        border: none;
+        margin: 0px 1px 0px 2px;
+        font-size: 8px;
+    }
+    #table_dangmac {
+        display: block;
+    }
+    /* #table_dangmac th,td {
+        text-align: center;
+        border-left: solid 1px wheat;
+        border-right: solid 1px wheat;
+        border-bottom: 1px black solid;
+    } */
+    #table_hang {
+        width: 100%;
+        text-align: center;
+        font-size: 8px;
+    }
+    
+    #table_hang th{
+        background-color: white;
+        position: sticky;
+        top: 2px;
+    }
+    #table_01 img {width: 30px;height: 25px;margin-left: 1px;}
+    #table_01 {width: 7%;}
+    #table_02 {width: 8%;}
+    #table_03 {width: 10%;}
+    #table_04 {width: 10%;}
+    #table_05 {width: 11%;}
+    #table_06 {width: 10%;}
+    #table_07 {width: 11%;}
+    #table_08 {width: 11%;}
+    
+    /* #table_1 {
+        width: 7%;
+    } */
+    /* #table_2 {
+        width: 8%;
+    }
+    #table_3 {
+        width: 5%;
+    } */
+    #table_1 img {
+        width: 23px;
+        height: 20px;
+        border: 1px solid black;
+    }
+
+    #table_chuakhoi {
+        display: none;
+    }
+    #table_tuvong {
+        display: none;
+    }
+/*     
+    tr {
+        height: 40px;
+        width: 100%;
+    } */
+    th {
+        border: solid 1px black;
+    }
+    /* hien tai bên phải ///////////////////////////////////////// */
+    #hientai_benphai {
+        display: none;
+        /* position: fixed; */
+        width: 15%;
+        margin: 0px 0px 0px 2%;
+    }
+    #sticky {
+        position: sticky;
+        top: 2px;
+    }
+    #hientai_thongbao {
+        /* position: sticky;
+        top: 1px; */
+        border: 1px solid black;
+        width: 100%;
+    }
+    #hientai_thongbao1{font-size: 25px;text-align: center;margin: 15px 0px 0px 0px;}
+    #hientai_thongbao2{font-size: 35px ;color: red;text-align: center;margin: 7px 0px 0px 0px;}
+    #hientai_thongbao3{font-size: 25px;text-align: center;margin: 7px 0px 0px 0px;}
+    #hientai_thongbao4{font-size: 35px ;color: blue;text-align: center;margin: 7px 0px 0px 0px;}
+    #hientai_thongbao5{font-size: 10px;text-align: center;margin: 5px 0px 0px 0px;}
+    #hientai_thongbao6{font-size: 25px;text-align: center;margin: 7px 0px 0px 0px;}
+    #hientai_thongbao7{font-size: 35px ;color: yellow;text-align: center;margin: 7px 0px 0px 0px;}
+    #hientai_thongbao8{font-size: 10px;text-align: center;margin: 5px 0px 0px 0px;}
+    #hientai_thongbao9{font-size: 25px;text-align: center;margin: 7px 0px 0px 0px;}
+    #hientai_thongbao10{font-size: 35px ;color: green;text-align: center;margin: 7px 0px 0px 0px;}
+    #hientai_thongbao11{font-size: 10px;text-align: center;margin: 5px 0px 15px 0px;}
+    
+    #hientai_benphai img {
+        /* position: sticky;
+        top: 55%; */
+        margin-top: 10px;
+        width: 100%;
+    }
+    
+    
+    
+    /* het //////////////////////////////// */
+    #margin_2 {margin-left: 2px;}
+    .margin_5 {margin-left: 5px;}
+    .margin_2 {margin-left: 2px;}
+      /* covid 19 //////////////////////////// */
+    #covid19 {
+        display: none;
+    } 
+    #thongtin {
+        display: block;
+    }
+    #thongtin_noidung {
+        display: block;
+    }
+    #covid_bentrai {
+        width: 100%;
+        margin: 0px 0px 0px 0px;
+        font-size: 10px;
+    }
+    #a_share {margin-left: 21%;margin-top: 0px;}
+    #a_share1 {margin-left: 1%;margin-top: 0px}
+    #thongtin_title {
+        font-size: 180%;
+        margin: 0px 0% 0px 0%;
+    }
+    #thongtin_bentrai1 {
+        border-top: 1px solid rgb(102, 75, 75);
+        border-bottom: 1px solid rgb(211, 209, 209);
+        margin: 0px 0% 1% 2%;
+        display: flex;
+        height: 15px;
+        width: 93%;
+    }
+    #thongtin_capnhat {
+        margin-top: 2px;
+        font-size: 8px;
+        color: rgb(53, 48, 48);
+    }
+    #thongtin_bentrai1 a {
+        width: 4%;
+        height: 100%;
+        /* margin-top: 1px; */
+    }
+    #thongtin_bentrai1 img {
+        width: 90%;
+        height: 90%;
+    }
+    #share {
+        width: 22%;
+        margin-top: 1px;
+        margin-left: 2%;
+        display: flex;
+    }
+    #share img {
+        margin-top: 4px;
+        width: 20%;
+        height: 55%;
+    }
+    #slgshare {
+        font-size: 10px;
+        width: 100%;
+        margin-left: 5%;
+        color: rgb(60, 60, 223);
+    }
+    #slgshare1 {
+        font-size: 10px;
+        width: 100%;
+        margin-left: 5%;
+        color: rgb(60, 60, 223);
+    }
+    #slgshare2 {
+        width: 55%;
+        margin-left: 5%;
+        color: rgb(60, 60, 223);
+    }
+    .covid_bentrai_title {
+        font-size: 163%;
+    }
+    .covid_title_child {
+        margin: 1% 0px 1% 0px;
+    }
+    #thongtin_mobile {display: block;}
+    #covid_benphai {
+        display: none;
+    }
+    .covid_benphai_title {
+        text-align: center;
+        font-size: 15px;
+        width: 94%;
+        margin-left: 3%;
+        border-bottom: 1px solid black;
+    }
+    #thongtin_mobile a {
+        margin: 5px 0px 5px 2%;
+        width: 90%;
+        display: flex;
+        height: 38px;
+        font-size: 10px;
+       
+    }
+    #thongtin_mobile img {
+        width: 25%;
+        height: 90%;
+    }
+    .tintuc_title {
+        margin-left: 5px;
+        height: 90%;
+        overflow: hidden;
+        color: black;
+    }
+    #thongtin_mobile iframe {
+        margin: 5px 0px -15px 5%;
+        width: 90%;
+        height: 200px;
+    }
+    /* #covid_benphai iframe {
+        width: 100%;
+        height: 40px;
+    } */
+    /* trieuchung /////////////////////////// */
+    #trieuchung {
+        display: none;
+    }
+    #thongtin_1 {
+        font-size: 17px;
+        margin-left: 2px;
+    }
+    #thongtin_2 {
+        text-indent: 20px;
+        margin-top: 5px;
+        font-size: 13px;
+        margin-left: 5px;
+    }
+    #thongtin_3 {
+        font-size: 13px;
+    }
+    #thongtin_4 {
+        font-size: 13px;
+        margin-left: 20px;
+    }
+    #thongtin_5 {
+        margin-left: 2px;
+        font-size: 17px;
+    }
+    #thongtin_6 {
+        margin-left: 5px;
+        text-indent: 20px;
+        font-size: 13px;
+    }
+    #thongtin_7 {
+        margin-left: 5px;
+        font-size: 13px;
+        text-indent: 20px;
+    }
+    #thongtin_8 {
+        margin-left: 5px;
+        font-size: 13px;
+        text-indent: 20px;
+    }
+    #thongtin_9 {
+        margin-left: 4px;
+        text-indent: 15px;
+        font-size: 13px;
+    }
+    .thong_tin10 {
+        width: 100%;
+        font-size: 14;
+        display: flex;
+        margin-bottom: 10px;
+    }
+    .day {
+        width: 14%;
+        margin-left: 2px;
+    }
+    .thong_tin_inform {
+        width: 85%;
+    }
+    
+    #thong_tin11 {
+        margin: 0px 2% 0px 2%;
+        width: 96%;
+        border: 1px solid black;
+        border-radius: 15px;
+        height: 380px;
+    } 
+    #thong_tin11_1 {
+        font-size: 19px;
+        margin: 0px 2% 0px 2%;
+        width: 96%;
+        border-radius: 15px;
+        text-align: center;
+        margin-bottom: 1%;
+        margin-top: 1%;
+    }
+    #thong_tin11_2 {
+        margin: 0px 2% 0px 2%;
+        width: 96%;
+        font-size: 11px;
+        margin-bottom: 1%;
+    }
+    #thong_tin11_3 {
+        margin: 0px 2% 0px 2%;
+        width: 96%;
+    }
+    #thong_tin11_3 li {
+        font-size: 12px;
+    }
+    #thong_tin11_4 {
+        margin: 0px 2% 0px 2%;
+        width: 96%;
+        font-size: 11px;
+        margin-bottom: 1%;
+    }
+    #thong_tin11_5 {
+        font-size: 12px;
+        text-indent: 10px;
+        margin: 0px 2% 0px 2%;
+        width: 96%;
+    }
+    #thong_tin12 {
+        margin-top: 5px;
+        border: 1px solid black;
+    }
+    #thong_tin12_1 {
+        font-size: 25px;
+        text-align: center;
+    }
+    
+    
+    
+    /* phongngua ////////////////////////////// */
+    #phongngua {
+        display: none;
+    }
+    #phongngua ul {
+        margin-left: -5px;
+    }
+    #phongchong_title {
+        font-size: 17px;
+        margin-left: 2px;
+    }
+    #lienhebacsi {display: none;}
+
+    #lienhebacsi_text {font-size: 30px;text-align: center;width: 90%;}
+    #lienhebacsi_mobile {width: 100%;margin: 0px 0px 0px 0px;display: block;}
+
+    #lienhebacsi_trai {width: 90%;margin: 0px 0px 5px 5%;border: 1px solid black;height: 40%;border-radius: 10px;display: flex;}
+    #lienhebacsi_trai img {height: 100%;width: 31%;margin: 6px -3% 5px 8%;}
+    #lienhebacsi_đuongdaynong {width: 90%;margin: 10px 5% 5% 0%;}
+    #lienhebacsi_đuongdaynong_text{font-size: 18px;}
+    #lienhebacsi_sdt {display: flex;text-align: center;margin-bottom: 5%;margin-top: 5px;}
+    #lienhebacsi_sdt1 {color: red;border-right: 1px solid black;width: 50%;font-size: 21px;}
+    #lienhebacsi_sdt2 {color: red;width: 49%;font-size: 21px;}
+    
+    #lienhebacsi_phai {width: 90%;margin: 9px 0% 9px 5%;display: flex;flex-flow: wrap;border: 1px solid black;border-radius: 17px;height: 300px;}
+    #lienhebacsi_phai img{width: 90%;height: 38%;margin: 0px 5% 0PX 5%;border: 1px solid firebrick;}
+    #lienhebacsi_phai_text {font-size: 17px;margin: 0px 5% 0px 2%;text-align: center;}
+    #flex-1 {display: flex;height: 29%;width: 100%;margin-top: 2%;}
+    #lienhebacsi_phai_link {font-size: 9px;width: 45%;height: 100%;display: flex;flex-flow: wrap ;margin: 0px 10px 0px 10px;border: 1px solid black;border-radius: 17px;}
+    #lienhebacsi_phai_link a {height: 35px;overflow: hidden;margin: 1% 0% 0px 5%;width: 90%;}
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    /* tin tuc //////////////////////////////////////////////////////////// */
+    #tintuc {display: none;}
+    
+    
+    /*  quiz //////////////////////////////////////////////////////// */
+    #quiz {
+        height: 637px;
+        display: none;
+        background-image: url('https://i.pinimg.com/originals/a4/a5/48/a4a5484cc9e7f0594f426a0afde8d372.jpg');    
+    }
+    .scene {display: none;}
+    #cuocthi_text {
+        /* position: fixed; */
+        left: 2%;
+        font-family: 'Josefin Sans', sans-serif;
+        font-size: 30px;
+        color: #ABA9BB;
+        text-align: center;
+    }
+    #rule_contest{
+        display: block;
+        margin: 10px 2% 0px 2%;
+        top: 70px;
+    }
+    #den {color: #ABA9BB;}
+    #rule_contest_top {
+        /* z-index: 1; */
+        display: block;
+        margin-bottom: 0px;
+        /* height: 250px; */
+        /* background-color: blue; */
+    }
+    .rule_contest_body {
+        font-family: 'Langar', cursive;
+        /* line-height : 25px; */
+        color: #CFCEFF;
+        width: 100%;
+        /* height: 70px; */
+        font-size: 12px;
+        height: 87px;
+    }
+    .rule_title {
+        /* font-family: 'Langar', cursive; */
+        /* border-radius: 20px; */
+        width: 100%;
+        height: 23px;
+        text-align: center;
+        color: #D63B48;
+        font-size: 15px;
+    }
+     #join{
+         top: 573px;
+        width: 100%;
+        text-align: center
+    } 
+    #join_button {
+        width: 80%;
+        height: 30px;
+        font-size: 20px;
+        color: blue;
+        margin-left: 5%;
+    }
+    #noidung{
+        width: 65%;
+        margin: 0px 5% 0px 0px;
+    }
+    
+    /* #title1 {
+        margin-top: 1%;
+        font: 40px blue;
+        background-color: wheat;
+        border: solid black 1px;
+        text-indent: 3%;
+        border-radius: 10px;
+    }
+    .title {
+        margin-top: 1%;
+        font: 40px blue;
+        background-color: wheat;
+        border: solid black 1px;
+        text-indent: 3%;
+        border-radius: 10px;
+    }
+    .content{
+        font: 30px green ;
+        background-color: wheat;
+        border: solid black 1px;
+        margin: 3% ;
+    } */
+    /* phan ben trai ////////////////////////////////// */
+    /* #giaithuong{
+        width: 30%;
+    }
+    #donvitochuc_donghanh {
+        display: flex;
+    }
+    .donvitochuc {
+        width: 40%;
+        height: 180px;
+        margin: 1% 5% 0px 5%;
+        background-color: whitesmoke;
+        border: 1px solid black;
+        text-align: center;
+        font-size: 21px;
+        color: white;
+        line-height: 50px;
+    }
+    #logo {
+        width: 70%;
+        height: 70%;
+    }
+    #mindx {
+        margin: 15% 0px 0px 0px;
+        width: 80%;
+        height: 40%;
+    }
+    #donvi {
+        width: 100%;
+        height: 30%;
+        background-color: rgb(187, 30, 30);
+    }
+    #nguoithi {
+        width: 100%;
+        height: 50%;
+        margin: 9% 0px 0px 0px;
+        background-color: white;
+        
+    }
+    #nguoithi_1 {
+        background-color: red;
+        display: flex;
+        height: 70px;
+    }
+    #cup {
+        background-color: white;
+        border-radius: 25px;
+        width: 50px;
+        height: 50px;
+        margin: 2% 9% 2% 10%;
+    }
+    
+    #cup img {
+        margin-top: 12px;
+        margin-right: 9px;
+        margin-left: 9px;
+        width: 30px;
+        height: 30px;
+    }    
+    #soluongthisinh {
+        margin-top: 1%;
+        font-size: 40px;
+        color: white;
+    }
+    #flex {
+        display: flex;
+    }
+    #_50 {
+        width: 50%;
+        height: 60%;
+        margin: 5% 0px 5% 0px;
+        border-right: 1px solid black;
+    }
+    #solg {
+        margin: 5% 0px 0px 0px;
+        font-size: 25px;
+        color: rgb(211, 24, 24);
+        text-align: center;
+    }
+    #dathamgia {
+        font-style: initial;
+        margin: 0px 0px 0px 0px;
+        font-size: 25px;
+        color: rgb(245, 66, 66);
+        text-align: center;
+    }
+    #solg1 {
+        margin: 5% 0px 0px 0px;
+        font-size: 25px;
+        color: rgb(211, 24, 24);
+        text-align: center;
+    }
+    #dathamgia1 {
+        font-style: initial;
+        margin: 0px 0px 0px 0px;
+        font-size: 25px;
+        color: rgb(245, 66, 66);
+        text-align: center;
+    }
+    .top {
+        height: 18%;
+        background-color: whitesmoke;
+        margin: 3% 2% 2% 2%;
+        display: flex;
+    }
+    .top_anh {
+        width: 24%;
+        height: 100%;
+    }
+    .top_anh img {
+        position: relative;
+        bottom: 24px;
+        width: 100%;
+        height: 100%;
+    }
+    .top_anh div {
+        position: relative;
+        bottom: 4px;
+        right: 9px;
+        z-index: 1;
+        font-size: 16px;
+        text-align: center;
+        width: 25%;
+        height: 25%;
+        background-color: rgb(54, 54, 243);
+        color: white;
+        border-radius: 20px;
+    }
+    .top_thongtin {
+        width: 60%;
+        margin: 0px 0px 0px 2%;
+        background-color: white;
+    }
+    .top_thongtin div {
+        margin: 5px;
+        font-size: 20px;
+    } */
+    /* #img_giaithuong {
+        background-color: red;
+        width: 100%;
+        height: 500px;
+        margin: 3px 0px 0px 0px;
+    }
+    #img_giaithuong img {
+        width: 100%;
+        height: 50%;
+    } */
+    
+    /* day la phan quiz ///////////////////////////////////////////// */
+    
+    
+    /* mau cua thanh cuon  */
+    ::-webkit-scrollbar {
+        max-width: 10px;
+      } 
+      
+      /* Track */
+      ::-webkit-scrollbar-track {
+        background: #005A34;
+      }
+      
+      /* Handle */
+      ::-webkit-scrollbar-thumb {
+        background: gray
+      }
+      
+      /* Handle on hover */
+      ::-webkit-scrollbar-thumb:hover {
+        background: #555;
+      }   
+      /* het */
+    
+    
+    
+    
+    #footer {display: none;}
+    #footer_mobile {
+        margin-top: 5px;
+        display: block;
+        width: 100%;
+        height: 400px;
+    }  
+    #feedback {
+        width: 90%;
+        /* height: 90%; */
+        margin: 0px 5% 10px 5%;
+        border: 1px black solid;
+        border-radius: 5px;
+        /* background-color: red; */
+    }
+    #feedback_text {
+        font-size: 20px ;
+        text-align: center;
+        margin: 0px 0px 0px 0px;
+    }
+    #feedback_suggest {
+        font-size: 10px;
+        text-align: center;
+        /* margin: 3px; */
+        width: 100%;
+    }
+    #feedback_name {
+        margin-top: 3px;
+        margin-left: 15%;
+        width: 70%;
+        outline: none;
+    }
+    #feedback_email {
+        margin-left: 15%;
+        width: 70%;
+        margin-top: 5px;
+        outline: none;
+    }
+    #feedback_inform {
+        text-align: start;
+        height: 30%;
+        margin-left: 15%;
+        width: 70%;
+        margin-top: 5px;
+        box-shadow: 4px black;
+        outline: none;
+    }
+    #send_feedback {
+        background-color: black;
+        color: white;
+        border: 1px white solid;
+        height: 10%;
+        margin-top: 7px;
+        margin-bottom: 2px;
+        width: 40%;
+        margin-left: 30%;
+        font-size: 11px;
+    }
+
+    #footer_container_mobile {
+        /* background-color: red; */
+        background-image: url('https://www.kidslifestudio.com/wp-content/uploads/footer-background.jpg');
+        height: 260px;
+    }
+    #footer_container_mobile_img {
+        height: 29%;
+        width: 40%;
+        margin: 0px 30% 0px 30%;
+    }
+    #camket {
+        width: 90%;
+        height: 24%;
+        margin-left: 4%;
+        font-size: 11px;
+        text-align: center;
+    }
+    #footer_container_mobile_bottom {
+        height: 40%;
+    }
+    #footer_container_mobile_bottom_inform {
+        display: flex;
+        width: 90%;
+        margin: 2px 5% 2px 5%;
+    }
+    #footer_container_mobile_bottom img {
+        width: 35px;
+        height: 35px;
+    }
+    #footer_container_mobile_bottom_inform div {
+        margin-top: 2px;
+        font-size: 12px;
+    }
+    #footer_follow {
+        margin-top: 5px;
+        display: flex;
+        border-top: 1px solid black;
+        width: 96%;
+        margin-left: 2%;
+    }
+    #footer_follow div {
+        margin-left: 5px;
+    }
+    #footer_follow a {
+        margin-right: 2%;
+    }
+    #footer_follow img {
+        margin-top: 1px;
+        width: 22px;
+        height: 22px;
+    }
+    
+    
+    
+
+    .mySlides1 {display: none}
+    .mySlides12 {display: none}
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.dot1 {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+.active, .dot1:hover {
+    background-color: #717171;
+  }
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+.no-js #loader { display: none;  }
+.js #loader { display: block; position: absolute; left: 100px; top: 0; }
+.se-pre-con {
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 9999;
+	background: url('https://smallenvelop.com/wp-content/uploads/2014/08/Preloader_11.gif') center no-repeat #fff;
+}
+    
+
+}
+@media only screen and (min-width : 740px ) and (max-width : 1023px) {
+
+}
+@media only screen and (min-width : 1024px) and (max-width : 1280px) {
+    #bluezone_title2 {
+        font-size: 30px;
+    }
+    #hientai_camac_table div {
+        font-size: 13px;
+        margin: 2px 0px 0px 5px;
+        width: 154px;
+        text-align: center;
+    }
+    #bangthongke_title1_moblie {
+        display: block;
+        font-size: 28px;
+        width: 48%;
+        margin: 6px 0px 4px 4px;
+    }
+    #bangthongke_title1 {display: none;}
+    #sdt {
+        margin: 7px 0px 0px 16%;
+        font-size: 20px;
+        color: white;
+    }
+    #face {
+        background-repeat: no-repeat;
+        margin: 8px 10px 3px 10px;
+        width: 2.35%;
+        height: 100%;
+        background-size: 100%;
+        background-image: url('https://cdn2.iconfinder.com/data/icons/social-media-2151/512/1_Media_social_website_facebook-256.png');
+    }
+    #gmail {
+        background-repeat: no-repeat;
+        margin: 9px 0px 3px 0px;
+        width: 2.35%;
+        height: 80%;
+        z-index: 1;
+        background-size: 100%;
+        background-image: url('file:///C:/Users/Admin/Desktop/C4T-B13/iconfinder_gmail_1147408%20(1).png');
+    }
+    #a_share {margin-left: 27%;}
+    #slgshare {
+        width: 72%;
+        margin-left: 5%;
+        color: rgb(60, 60, 223);
+    }
+    #lienhebacsi_trai img {
+        height: 72%;
+        width: 80%;
+        margin: 5px 10% 0px 10%;
+    }
+    #lienhebacsi_phai_text {
+        font-size: 22px;
+        margin: 2% 2% 0px 2%;
+        height: 20%;
+    }
+    #lienhebacsi_phai_link img {
+        width: 90%;
+        height: 45%;
+        margin-left: 5%;
+        border: 1px solid whitesmoke;
+    }
+    #lienhebacsi_phai {
+        width: 45%;
+        height: 474px;
+        margin: 0px 0% 0px 5%;
+        border: 1px solid black;
+        border-radius: 17px;
+    }
+    #slgshare1 {
+        width: 72%;
+        margin-left: 5%;
+        color: rgb(60, 60, 223);
+    }
+    #slgshare2 {
+        width: 72%;
+        margin-left: 5%;
+        color: rgb(60, 60, 223);
+    }
+    #thong_tin11_1 {
+        font-size: 26px;
+        margin: 0px 2% 0px 2%;
+        width: 96%;
+        border-radius: 15px;
+        text-align: center;
+        margin-bottom: 1%;
+        margin-top: 1%;
+    }
+    #cuocthi_text {
+        /* font-family: 'Langar', cursive; */
+        /* font-family: 'Chela One', cursive; */
+        /* font-family: 'Holtwood One SC', serif; */
+        font-family: 'Josefin Sans', sans-serif;
+        font-size: 48px;
+        position: absolute;
+        top: 47px;
+        left: 15%;
+        z-index: 1;
+        color: #ABA9BB;
+        text-align: center;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
